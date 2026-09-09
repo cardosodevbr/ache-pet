@@ -1,3 +1,39 @@
+    :root {
+        /* CORES - ACHEPET */
+        --azul-principal: #1489D8;
+        --azul-escuro: #0873BE;
+        --azul-claro: #DFF2FD;
+        --rosa-principal: #E9166B;
+        --rosa-claro: #FDE4EF;
+        --branco: #FFFFFF;
+        --preto: #000000;
+        --cinza: #F2F2F2;
+        --cinza-texto: #333333;
+
+        /* FONTES */
+        --fonte-poppins: 'Poppins', sans-serif;
+        --fonte-merriweather: 'Merriweather', serif;
+        --fonte-dancing: 'Dancing Script', cursive;
+        --fonte-open-sans: 'Open Sans', sans-serif;
+
+        /* CORES DE TEXTO */
+        --texto-principal: var(--preto);
+        --texto-secundario: var(--cinza-texto);
+        --texto-branco: var(--branco);
+
+        /* FUNDOS */
+        --fundo-header: var(--branco);
+        --fundo-azul: var(--azul-claro);
+        --fundo-rosa: var(--rosa-claro);
+        --fundo-card: var(--branco);
+
+        /* BOTÕES */
+        --botao-azul: var(--azul-principal);
+        --botao-rosa: var(--rosa-principal);
+        --botao-hover-azul: var(--azul-escuro);
+        --botao-hover-rosa: #C9125D;
+    }
+
     #app-container {
         height: 100vh;
         width: 100vw;
