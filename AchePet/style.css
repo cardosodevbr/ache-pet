@@ -44,3 +44,773 @@
         text-align: center;
         line-height: 2;
     }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        min-height: 100vh;
+
+        background: var(--branco);
+        color: var(--texto-principal);
+
+        font-family: var(--fonte-poppins);
+    }
+
+
+    /* HEADER */
+
+    .site-header {
+        width: 100%;
+
+        height: 70px;
+
+        background: var(--fundo-header);
+
+        border-bottom: 1px solid #eeeeee;
+
+        position: sticky;
+        top: 0;
+
+        z-index: 100;
+    }
+
+    .header-container {
+        width: 92%;
+        max-width: 1200px;
+
+        height: 100%;
+
+        margin: 0 auto;
+
+        display: flex;
+        align-items: center;
+    }
+
+
+    /* LOGO */
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        text-decoration: none;
+    }
+
+    .logo img {
+        width: 105px;
+        height: 55px;
+
+        object-fit: contain;
+    }
+
+
+    /* MENU */
+
+    .main-nav {
+        margin-left: auto;
+
+        display: flex;
+        align-items: center;
+
+        gap: 40px;
+    }
+
+    .main-nav a {
+        color: var(--preto);
+
+        text-decoration: none;
+
+        font-size: 13px;
+        font-weight: 600;
+
+        transition: color 0.2s ease;
+    }
+
+    .main-nav a:hover {
+        color: var(--azul-principal);
+    }
+
+
+    /* BOTÃO DE TEMA */
+
+    .theme-toggle {
+        width: 45px;
+        height: 24px;
+
+        margin-left: 35px;
+
+        padding: 2px;
+
+        border: 1px solid var(--azul-principal);
+        border-radius: 20px;
+
+        background: var(--branco);
+
+        cursor: pointer;
+    }
+
+    .theme-toggle span {
+        display: block;
+
+        width: 18px;
+        height: 18px;
+
+        border-radius: 50%;
+
+        background: var(--azul-principal);
+
+        transition: transform 0.2s ease;
+    }
+
+    .theme-toggle.active span {
+        transform: translateX(19px);
+    }
+
+
+    /* ÁREA INICIAL */
+
+    .hero {
+        min-height: 390px;
+
+        padding: 65px 20px;
+
+        background: var(--fundo-azul);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 650px;
+    }
+
+
+    /* TÍTULO */
+
+    .hero h1 {
+        margin-bottom: 10px;
+
+        font-size: 48px;
+        font-weight: 500;
+    }
+
+
+    /* TEXTO */
+
+    .hero p {
+        max-width: 540px;
+
+        margin: 0 auto 25px;
+
+        font-family: var(--fonte-open-sans);
+
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    /* CAIXA DE BUSCA */
+
+    .search-box {
+        width: 330px;
+
+        margin: 0 auto;
+
+        padding: 10px;
+
+        background: var(--azul-principal);
+
+        border-radius: 12px;
+    }
+
+
+    /* CAMPO */
+
+    .search-input {
+        height: 38px;
+
+        padding: 0 14px;
+
+        margin-bottom: 8px;
+
+        background: var(--branco);
+
+        border-radius: 20px;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .search-icon {
+        margin-right: 8px;
+
+        font-size: 20px;
+    }
+
+    .search-input input {
+        width: 100%;
+
+        border: none;
+        outline: none;
+
+        background: transparent;
+
+        font-family: var(--fonte-open-sans);
+
+        font-size: 12px;
+    }
+
+
+    /* BOTÕES */
+
+    .search-buttons {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 8px;
+    }
+
+    .search-buttons button {
+        height: 32px;
+
+        border: none;
+        border-radius: 20px;
+
+        font-family: var(--fonte-poppins);
+
+        font-size: 12px;
+        font-weight: 700;
+
+        cursor: pointer;
+
+        transition: 0.2s ease;
+    }
+
+    .search-buttons button:hover {
+        transform: translateY(-2px);
+    }
+
+
+    /* PERDI */
+
+    .btn-lost {
+        background: var(--branco);
+
+        color: var(--azul-principal);
+    }
+
+    .btn-lost:hover {
+        background: var(--cinza);
+    }
+
+
+    /* ENCONTREI */
+
+    .btn-found {
+        background: var(--rosa-principal);
+
+        color: var(--branco);
+    }
+
+    .btn-found:hover {
+        background: var(--botao-hover-rosa);
+    }
+
+
+    /* SEÇÕES DE ANIMAIS */
+
+    .pets-section {
+        padding: 55px 0 70px;
+    }
+
+    .lost-section {
+        background: var(--fundo-rosa);
+    }
+
+    .found-section {
+        background: var(--fundo-azul);
+    }
+
+
+    /* CONTAINER */
+
+    .section-container {
+        width: 92%;
+        max-width: 1200px;
+
+        margin: 0 auto;
+    }
+
+
+    /* TÍTULO DAS SEÇÕES */
+
+    .section-title {
+        margin-bottom: 25px;
+    }
+
+    .section-title h2 {
+        font-size: 20px;
+
+        font-weight: 700;
+    }
+
+    .section-title p {
+        margin-top: 3px;
+
+        font-family: var(--fonte-open-sans);
+
+        font-size: 11px;
+
+        line-height: 1.4;
+    }
+
+
+    /* PERDIDOS */
+
+    .lost-title h2,
+    .lost-title p {
+        color: var(--rosa-principal);
+    }
+
+
+    /* ENCONTRADOS */
+
+    .found-title h2,
+    .found-title p {
+        color: var(--azul-principal);
+    }
+
+
+    /* GRID DOS PETS */
+
+    .pets-grid {
+        display: grid;
+
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 20px;
+    }
+
+
+    /* CARD DO PET */
+
+    .pet-card {
+        overflow: hidden;
+
+        background: var(--branco);
+
+        border-radius: 14px;
+
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+        cursor: pointer;
+
+        transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+
+    .pet-card:hover {
+        transform: translateY(-4px);
+
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+
+    /* IMAGEM */
+
+    .pet-card>img {
+        width: 100%;
+        height: 145px;
+
+        display: block;
+
+        object-fit: cover;
+    }
+
+
+    /* STATUS */
+
+    .pet-status {
+        display: block;
+
+        width: calc(100% - 20px);
+
+        margin: 8px auto;
+
+        padding: 3px 0;
+
+        border-radius: 20px;
+
+        text-align: center;
+
+        color: var(--branco);
+
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+
+    /* PET PERDIDO */
+
+    .pet-status.lost {
+        background: var(--rosa-principal);
+    }
+
+
+    /* PET ENCONTRADO */
+
+    .pet-status.found {
+        background: var(--azul-principal);
+    }
+
+
+    /* INFORMAÇÕES DO PET */
+
+    .pet-info {
+        padding: 0 12px 15px;
+    }
+
+    .pet-info h3 {
+        margin-bottom: 8px;
+
+        font-size: 13px;
+
+        font-weight: 600;
+    }
+
+    .pet-info p {
+        margin-bottom: 5px;
+
+        font-family: var(--fonte-open-sans);
+
+        font-size: 9px;
+
+        color: var(--cinza-texto);
+    }
+
+
+    /* NOSSOS OBJETIVOS */
+
+    .objectives-section {
+        padding: 35px 0 70px;
+
+        background: var(--fundo-azul);
+    }
+
+
+    /* TÍTULO */
+
+    .objectives-title {
+        width: 96%;
+
+        margin: 0 auto 25px;
+
+        padding: 11px;
+
+        background: var(--rosa-principal);
+
+        border-radius: 10px;
+
+        color: var(--branco);
+
+        text-align: center;
+
+        font-size: 15px;
+
+        font-weight: 600;
+    }
+
+
+    /* GRID */
+
+    .objectives-grid {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 22px;
+    }
+
+
+    /* CARDS DOS OBJETIVOS */
+
+    .objective-card {
+        height: 280px;
+
+        overflow: hidden;
+
+        position: relative;
+
+        border-radius: 14px;
+
+        background: var(--branco);
+
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    }
+
+
+    /* IMAGEM */
+
+    .objective-card>img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+    }
+
+
+    /* TEXTO */
+
+    .objective-content {
+        position: absolute;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        padding: 18px;
+
+        min-height: 145px;
+
+        background: rgba(233, 22, 107, 0.82);
+
+        color: var(--branco);
+
+        border-radius: 14px 14px 0 0;
+    }
+
+    .objective-content h3 {
+        margin-bottom: 8px;
+
+        font-family: var(--fonte-merriweather);
+
+        font-size: 17px;
+
+        font-weight: 400;
+    }
+
+    .objective-content p {
+        font-family: var(--fonte-open-sans);
+
+        font-size: 11px;
+
+        line-height: 1.5;
+    }
+
+
+    /* FOOTER */
+
+    .site-footer {
+        width: calc(100% - 40px);
+
+        max-width: 1400px;
+
+        margin: 25px auto 15px;
+
+        padding: 18px 30px;
+
+        background: var(--azul-principal);
+
+        color: var(--branco);
+
+        border-radius: 18px;
+    }
+
+    .footer-content {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 25px;
+    }
+
+    .footer-content p {
+        margin: 0;
+
+        font-family: var(--fonte-poppins);
+
+        font-size: 16px;
+    }
+
+    .footer-divider {
+        width: 1px;
+        height: 38px;
+
+        background: rgba(255, 255, 255, 0.5);
+
+        margin-left: auto;
+    }
+
+    .footer-message {
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+    }
+
+    .footer-message span {
+        font-size: 23px;
+    }
+
+
+    /* RESPONSIVIDADE */
+
+
+    /* TABLET */
+
+    @media (max-width: 900px) {
+
+        .main-nav {
+            gap: 20px;
+        }
+
+        .main-nav a {
+            font-size: 11px;
+        }
+
+        .theme-toggle {
+            margin-left: 20px;
+        }
+
+
+        .pets-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+
+        .objectives-grid {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+
+    /* CELULAR */
+
+    @media (max-width: 600px) {
+
+        .site-header {
+            height: 60px;
+        }
+
+
+        .logo img {
+            width: 85px;
+        }
+
+
+        .main-nav {
+            display: none;
+        }
+
+
+        .theme-toggle {
+            margin-left: auto;
+        }
+
+
+        .hero {
+            padding: 50px 20px;
+
+            min-height: 350px;
+        }
+
+
+        .hero h1 {
+            font-size: 35px;
+        }
+
+
+        .hero p {
+            font-size: 13px;
+        }
+
+
+        .search-box {
+            width: 95%;
+        }
+
+
+        .pets-section {
+            padding: 40px 0 50px;
+        }
+
+
+        .pets-grid {
+            grid-template-columns: 1fr 1fr;
+
+            gap: 12px;
+        }
+
+
+        .pet-card>img {
+            height: 120px;
+        }
+
+
+        .objective-card {
+            height: 260px;
+        }
+
+
+        .footer-content {
+            flex-direction: column;
+
+            padding: 5px;
+
+            text-align: center;
+
+            gap: 12px;
+        }
+
+
+        .footer-divider {
+            width: 70px;
+            height: 1px;
+
+            margin: 0;
+        }
+
+
+        .footer-message {
+            justify-content: center;
+
+            font-size: 13px;
+
+            text-align: center;
+        }
+
+    }
+
+
+    @media (max-width: 400px) {
+
+        .pets-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .search-box {
+            width: 100%;
+        }
+
+    }
