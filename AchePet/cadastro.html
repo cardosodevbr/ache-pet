@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <title>Cadastro - Ache Pet 🐾</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <a href="tela-inicial.html" class="logo">
+                <img src="Media/logo/Logo.jpeg" alt="AchePet">
+            </a>
+
+<nav class="main-nav">
+
+    <a href="login.html"> Login </a>
+
+    <a href="tela-inicial.html#mural"> Mural </a>
+
+    <a href="tela-inicial.html#quem-somos"> Quem somos? </a>
+
+</nav>
+
+<button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+    <span></span>
+</button>
+
+        </div>
+
+    </header>
+
+<main>
+
+    <section class="cadastro-section">
+
+        <div class="cadastro-container">
+
+        <div class="cadastro-title">
+            <h1> Crie sua conta </h1>
+
+            <p>
+                Cadastre-se no AchePet e ajude a reunir amores.
+            </p>
+        </div>
+
+    <form class="cadastro-formulario">
+
+        <div class="formulario">
+
+        <label for="nome"> Nome completo </label>
+
+        <input
+        type="text"
+        id="nome"
+        name="nome"
+        placeholder="Digite seu nome"
+        required>
+        </div>
+
+        <div class="formulario2">
+
+        <label for="email"> E-mail </label>
+
+        <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Digite seu e-mail"
+        required>
+        </div>
+
+        <div class="formulario3">
+
+        <label for="cidade">Cidade</label>
+
+        <input
+        type="text"
+        id="cidade"
+        name="cidade"
+        placeholder="Digite sua cidade"
+        required>
+        </div>
+
+        <div class="formulario4">
+
+        <label for="senha"> Senha </label>
+
+        <input
+        type="password"
+        id="senha"
+        name="senha"
+        placeholder="Crie uma senha"
+        required>
+        </div>
+
+        <div class="formulario6">
+
+        <label for="senha"> Confirmar senha </label>
+
+        <input
+        type="password"
+        id="confirmar-senha"
+        name="confirmar-senha"
+        placeholder="Digite a senha novamente"
+        required>
+        </div>
+
+<button type="submit" class="btn-cadastro">
+CRIAR CONTA
+</button>
+
+<p class="login-link">
+Já possui uma conta?
+
+<a href="login.html">Entrar</a>
+</p>
+
+        </form>
+
+    </div>
+        
+</section>
+
+</main>
