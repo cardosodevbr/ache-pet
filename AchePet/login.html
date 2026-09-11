@@ -1,112 +1,121 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>exercicio header</title>
-    <link rel="stylesheet" href="stylelogin.css">
+
+    <title>Login | AchePet</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <div class="container">
-            <div class="logo">
-                <!--icone-->
-                <h1>Ache<span class="destaque">Pet</span></h1>
-            </div>
+    <!-- HEADER -->
+    <header class="site-header">
 
-            <div class="menu">
-                <ul>
-                    <li><a href="#">Cadastro</a>
-                    <li><a href="#">Login</a>
-                    <li><a href="#">Mural</a>
-                    <li><a href="#">Quem somos?</a>
-                </ul>
-            </div>
+        <div class="header-container">
 
-            <div class="tema-escuro">
-                <!--botao que eu n sei fazer-->
-            </div>
+            <a href="tela-inicial.html" class="logo">
+                <img src="Media/Logo-imagem.png" alt="AchePet">
+            </a>
+
+            <nav class="main-nav">
+                <a href="cadastro.html">CADASTRO</a>
+                <a href="login.html">LOGIN</a>
+                <a href="tela-inicial.html#mural">MURAL</a>
+                <a href="tela-inicial.html#quem-somos">QUEM SOMOS?</a>
+            </nav>
+
+            <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                <span></span>
+            </button>
 
         </div>
+
     </header>
 
-    <section>
-        <div class="caixa-azul">
-            <div id="conteiner-login">
 
-                <div id="barras">
+    <!-- ÁREA DO LOGIN -->
+    <main>
 
-                    <div class="barra-branca">
-                        Usuario ou email <input type="email">
+        <section class="login-section">
 
-                        Senha <input type="senha">
+            <div class="login-container">
 
-                        
+                <div class="login-card">
 
-                            <button class="botao-rosa">
-                                Entrar
-                            </button>
+                    <div class="login-fields">
 
-                        
+                        <input type="text" placeholder="nome completo">
+
+                        <input type="email" placeholder="email">
 
                     </div>
 
-
-
-                </div>
-
-                <div id="imagemelink">
-                    <img src="">
-                    <br>
-                    <div id="caixa-links">
-
-                        <p><a href="#">Criar conta</a></p>
-                        <a href="#">esqueceu a senha</a>
-                    </div>
+                    <button class="login-button">
+                        CONTINUAR
+                    </button>
 
                 </div>
-
-
-
             </div>
+
+        </section>
+
+
+        <!-- FAIXA ROSA -->
+        <section class="login-pink-section">
+        </section>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            <img class="footer-logo" src="Media/Logo-com-título-remove.png" alt="AchePet">
+
+            <nav class="footer-links">
+
+                <a href="#">💬 Contato</a>
+
+                <a href="tela-inicial.html#quem-somos">
+                    👥 Quem somos?
+                </a>
+
+                <a href="tela-inicial.html#mural">
+                    🐾 Mural de Pets
+                </a>
+
+                <a href="login.html">
+                    🔐 Entrar
+                </a>
+
+            </nav>
+
         </div>
-    </section>
 
-    <section id="rosa">
 
-    </section>
+        <div class="footer-bottom">
 
-    <section id="com-logo">
-        <img src="">
-    </section>
-
-    <div class="semi-footer">
-        <div id="caixa-f">
-            <p><a href="#">Contato</a></p>
-            <p><a href="#">Quem somos?</a></p>
-
-        </div>
-
-        <div class="caixa-v">
-            <p><a href="#">Mural de pets</a></p>
-            <p><a href="#">Entrar</a></p>
-
-        </div>
-
-    </div>
-    <footer>
-        <div>
             <p>© 2026 Ache meu pet</p>
+
+            <div class="footer-divider"></div>
+
+            <p class="footer-message">
+                <span>♡</span>
+                Lorem Ipsum dolor
+            </p>
+
         </div>
 
-        <div>
-            <p>♡ Loren ipslum dolor</p>
-        </div>
     </footer>
-
 
 
 </body>
