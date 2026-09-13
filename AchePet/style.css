@@ -991,6 +991,10 @@
         font-size: 10px;
     }
 
+    .cadastro-card p {
+        color: #fff;
+    }
+
     .cadastro-fields input::placeholder {
         color: #555555;
     }
