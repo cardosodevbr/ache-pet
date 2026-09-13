@@ -5,119 +5,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Login | AchePet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
+    <title>Login - Ache Pet 🐾</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
     <header class="site-header">
 
         <div class="header-container">
 
             <a href="tela-inicial.html" class="logo">
-                <img src="Media/Logo-imagem.png" alt="AchePet">
+                <img src="Media/logo/Logo.jpeg" alt="AchePet">
             </a>
 
-            <nav class="main-nav">
-                <a href="cadastro.html">CADASTRO</a>
-                <a href="login.html">LOGIN</a>
-                <a href="tela-inicial.html#mural">MURAL</a>
-                <a href="tela-inicial.html#quem-somos">QUEM SOMOS?</a>
-            </nav>
+<nav class="main-nav">
 
-            <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
-                <span></span>
-            </button>
+    <a href="cadastro.html">CADASTRO</a>
+
+    <a href="login.html"> LOGIN </a>
+
+    <a href="tela-inicial.html#mural"> MURAL </a>
+
+    <a href="tela-inicial.html#quem-somos"> QUEM SOMOS? </a>
+
+</nav>
+
+<button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+    <span></span>
+</button>
 
         </div>
 
     </header>
 
+<main>
 
-    <!-- ÁREA DO LOGIN -->
-    <main>
+    <section class="cadastro-section">
 
-        <section class="login-section">
+        <div class="cadastro-container">
 
-            <div class="login-container">
+        <div class="cadastro-title">
+            <h1> Crie sua conta </h1>
 
-                <div class="login-card">
-
-                    <div class="login-fields">
-
-                        <input type="text" placeholder="nome completo">
-
-                        <input type="email" placeholder="email">
-
-                    </div>
-
-                    <button class="login-button">
-                        CONTINUAR
-                    </button>
-
-                </div>
-            </div>
-
-        </section>
-
-
-        <!-- FAIXA ROSA -->
-        <section class="login-pink-section">
-        </section>
-
-
-        </section>
-
-    </main>
-
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-
-        <div class="footer-content">
-
-            <img class="footer-logo" src="Media/Logo-com-título-remove.png" alt="AchePet">
-
-            <nav class="footer-links">
-
-                <a href="#">💬 Contato</a>
-
-                <a href="tela-inicial.html#quem-somos">
-                    👥 Quem somos?
-                </a>
-
-                <a href="tela-inicial.html#mural">
-                    🐾 Mural de Pets
-                </a>
-
-                <a href="login.html">
-                    🔐 Entrar
-                </a>
-
-            </nav>
-
-        </div>
-
-
-        <div class="footer-bottom">
-
-            <p>© 2026 Ache meu pet</p>
-
-            <div class="footer-divider"></div>
-
-            <p class="footer-message">
-                <span>♡</span>
-                Lorem Ipsum dolor
+            <p>
+                Cadastre-se no AchePet e ajude a reunir amores.
             </p>
-
         </div>
 
-    </footer>
+    <form class="cadastro-formulario">
 
+        <div class="formulario">
 
-</body>
+        <label for="nome"> Nome completo </label>
 
-</html>
+        <input
+        type="text"
+        id="nome"
+        name="nome"
+        placeholder="Digite seu nome"
+        required>
+        </div>
+
+        <div class="formulario2">
+
+        <label for="email"> E-mail </label>
+
+        <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Digite seu e-mail"
+        required>
+        </div>
+
+        <div class="formulario3">
+
+        <label for="cidade">Cidade</label>
+
+        <input
+        type="text"
+        id="cidade"
+        name="cidade"
+        placeholder="Digite sua cidade"
+        required>
+        </div>
+
+        <div class="formulario4">
+
+        <label for="senha"> Senha </label>
+
+        <input
+        type="password"
+        id="senha"
+        name="senha"
+        placeholder="Crie uma senha"
+        required>
+        </div>
+
+        <div class="formulario6">
+
+        <label for="senha"> Confirmar senha </label>
+
+        <input
+        type="password"
+        id="confirmar-senha"
+        name="confirmar-senha"
+        placeholder="Digite a senha novamente"
+        required>
+        </div>
+
+<button type="submit" class="btn-cadastro">
+CRIAR CONTA
+</button>
+
+<p class="login-link">
+Já possui uma conta?
+
+<a href="login.html">Entrar</a>
+</p>
+
+        </form>
+
+    </div>
+        
+</section>
+
+</main>
