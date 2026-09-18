@@ -1041,6 +1041,25 @@
         margin-top: 0;
     }
 
+    /* para a tela de digitar o codigo */
+    #note {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    #note-button {
+        background-color: #f881b0;
+        width: 110%;
+        height: 28px;
+
+        border: none;
+        border-radius: 20px;
+
+        outline: none;
+    }
+
 
     /* RESPONSIVO - CADASTRO */
 
