@@ -661,16 +661,19 @@
     }
 
     .footer-links a {
-        padding: 0 15px;
+            padding: 0 15px;
 
-        color: var(--preto);
+            color: var(--preto);
+            text-decoration: none;
 
-        text-decoration: none;
+            font-family: var(--fonte-poppins);
+            font-size: 17px;
 
-        font-family: var(--fonte-poppins);
-        font-size: 17px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
 
-        transition: color 0.2s ease;
+            transition: color 0.2s ease;
     }
 
     .footer-links a:hover {
@@ -679,6 +682,10 @@
 
     .footer-links a+a {
         border-left: 1px solid #aaaaaa;
+    }
+
+    .footer-links a img{
+        height: 30px;
     }
 
     /* PARTE AZUL */
