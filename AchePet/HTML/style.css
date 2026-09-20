@@ -1112,6 +1112,13 @@
     object-fit: cover;
 }
 
+.animal .status {
+    display: block;
+    background-color: var(--rosa-principal);
+    color: var(--branco);
+    text-align: center;
+}
+
 /*Imagens Animais Encontrados*/
 
 .lista-animais {
@@ -1132,4 +1139,10 @@
     display: block;
 }
 
+.animal .status1 {
+    display: block;
+    background-color: var(--azul-principal);
+    color: var(--branco);
+    text-align: center;
+}
 
