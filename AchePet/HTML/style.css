@@ -1088,3 +1088,44 @@
         }
 
     }
+
+
+/*Imagens Animais Perdidos*/
+
+.lista-animais {
+    display: grid;
+    grid-template-columns: repeat(5, 180px);
+    gap: 25px;
+    justify-content: center;
+}
+
+.animal {
+    width: 180px;
+}
+
+.animal img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+/*Imagens Animais Encontrados*/
+
+.lista-animais {
+    display: grid;
+    grid-template-columns: repeat(5, 180px);
+    gap: 25px;
+    justify-content: center;
+}
+
+.animal {
+    width: 180px;
+}
+
+.animal img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
