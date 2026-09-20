@@ -1094,20 +1094,22 @@
 
 .lista-animais {
     display: grid;
-    grid-template-columns: repeat(5, 180px);
-    gap: 25px;
-    justify-content: center;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
 }
 
 .animal {
-    width: 180px;
+    overflow: hidden;
+    background: var(--branco);
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
 .animal img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
+    width: 100%;
+    height: 145px;
     display: block;
+    object-fit: cover;
 }
 
 /*Imagens Animais Encontrados*/
@@ -1129,3 +1131,5 @@
     object-fit: cover;
     display: block;
 }
+
+
