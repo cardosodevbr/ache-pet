@@ -1095,3 +1095,61 @@
         }
 
     }
+
+
+/*Imagens Animais Perdidos*/
+
+.lista-animais {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.animal {
+    overflow: hidden;
+    background: var(--branco);
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.animal img {
+    width: 100%;
+    height: 145px;
+    display: block;
+    object-fit: cover;
+}
+
+.animal .status {
+    display: block;
+    background-color: var(--rosa-principal);
+    color: var(--branco);
+    text-align: center;
+}
+
+/*Imagens Animais Encontrados*/
+
+.lista-animais {
+    display: grid;
+    grid-template-columns: repeat(5, 180px);
+    gap: 25px;
+    justify-content: center;
+}
+
+.animal {
+    width: 180px;
+}
+
+.animal img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.animal .status1 {
+    display: block;
+    background-color: var(--azul-principal);
+    color: var(--branco);
+    text-align: center;
+}
+
