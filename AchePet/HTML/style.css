@@ -1065,7 +1065,8 @@
     }
 
     #teno-button {
-        background-color: #E9166B;;
+        background-color: #E9166B;
+        ;
         width: 65%;
         height: 25px;
 
@@ -1104,44 +1105,390 @@
 
     }
 
-/* Mural animais - Botão Ver Mais */
+    /* Mural animais - Botão Ver Mais */
 
-.ver-mais-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 35px;
-}
+    .ver-mais-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 35px;
+    }
 
-.btn-ver-mais {
-    padding: 10px 40px;
-    background: transparent;
-    color: var(--azul-principal);
-    border: 2px solid var(--azul-principal);
-    border-radius: 25px;
-    text-decoration: none;
-    font-family: var(--fonte-poppins);
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    transition: 0.25s ease;
-}
+    .btn-ver-mais {
+        padding: 10px 40px;
+        background: transparent;
+        color: var(--azul-principal);
+        border: 2px solid var(--azul-principal);
+        border-radius: 25px;
+        text-decoration: none;
+        font-family: var(--fonte-poppins);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        transition: 0.25s ease;
+    }
 
-.btn-ver-mais:hover {
-    background: var(--azul-principal);
-    color: var(--branco);
-}
+    .btn-ver-mais:hover {
+        background: var(--azul-principal);
+        color: var(--branco);
+    }
 
-/* Mural animais - Botão rosa */
+    /* Mural animais - Botão rosa */
 
-.lost-section .btn-ver-mais {
-    background: transparent;
-    color: var(--rosa-principal);
-    border: 2px solid var(--rosa-principal);
-    box-shadow: none;
-}
+    .lost-section .btn-ver-mais {
+        background: transparent;
+        color: var(--rosa-principal);
+        border: 2px solid var(--rosa-principal);
+        box-shadow: none;
+    }
 
-.lost-section .btn-ver-mais:hover {
-    background: var(--rosa-principal);
-    color: var(--branco);
-    box-shadow: none;
-}
+    .lost-section .btn-ver-mais:hover {
+        background: var(--rosa-principal);
+        color: var(--branco);
+        box-shadow: none;
+    }
+
+    /* QUEM SOMOS= */
+
+    .quem-somos {
+        background: var(--fundo-azul);
+        padding: 70px 0;
+    }
+
+    .quem-somos-container {
+        width: 92%;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 60px;
+    }
+
+    .quem-somos-content {
+        width: 55%;
+    }
+
+    .quem-somos-label {
+        display: inline-block;
+
+        margin-bottom: 8px;
+
+        color: var(--rosa-principal);
+
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .quem-somos-content h1 {
+        margin-bottom: 20px;
+
+        color: var(--azul-principal);
+
+        font-size: 38px;
+        font-weight: 700;
+    }
+
+    .quem-somos-content p {
+        margin-bottom: 15px;
+
+        color: var(--texto-secundario);
+
+        font-family: var(--fonte-open-sans);
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .quem-somos-image {
+        width: 40%;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .quem-somos-image img {
+        width: 100%;
+        max-width: 430px;
+
+        border-radius: 18px;
+
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+    }
+
+
+    /* NOSSA MISSÃO */
+
+    .missao-section {
+        padding: 60px 0;
+
+        background: var(--fundo-rosa);
+
+        text-align: center;
+    }
+
+    .missao-container {
+        width: 92%;
+        max-width: 850px;
+
+        margin: 0 auto;
+    }
+
+    .missao-container h2 {
+        margin-bottom: 15px;
+
+        color: var(--rosa-principal);
+
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    .missao-container p {
+        color: var(--texto-secundario);
+
+        font-family: var(--fonte-open-sans);
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+
+    /* COMO FUNCIONA */
+
+    .como-funciona {
+        padding: 65px 0;
+
+        background: var(--fundo-azul);
+    }
+
+    .como-funciona-container {
+        width: 92%;
+        max-width: 1200px;
+
+        margin: 0 auto;
+    }
+
+    .como-funciona-title {
+        margin-bottom: 30px;
+
+        text-align: center;
+    }
+
+    .como-funciona-title h2 {
+        color: var(--azul-principal);
+
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    .como-funciona-title p {
+        margin-top: 5px;
+
+        color: var(--texto-secundario);
+
+        font-family: var(--fonte-open-sans);
+        font-size: 13px;
+    }
+
+    .quem-somos-cards {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 22px;
+    }
+
+    .quem-somos-card {
+        padding: 30px 25px;
+
+        background: var(--branco);
+
+        border-radius: 14px;
+
+        text-align: center;
+
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+        transition: transform 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+
+    .quem-somos-card:hover {
+        transform: translateY(-4px);
+
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .quem-somos-icon {
+        width: 55px;
+        height: 55px;
+
+        margin: 0 auto 15px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: var(--rosa-claro);
+
+        border-radius: 50%;
+
+        font-size: 25px;
+    }
+
+    .quem-somos-card h3 {
+        margin-bottom: 10px;
+
+        color: var(--azul-principal);
+
+        font-size: 17px;
+    }
+
+    .quem-somos-card p {
+        color: var(--texto-secundario);
+
+        font-family: var(--fonte-open-sans);
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+
+    /* POR QUE CRIAMOS */
+
+    .porque-section {
+        padding: 65px 0;
+
+        background: var(--branco);
+    }
+
+    .porque-container {
+        width: 92%;
+        max-width: 900px;
+
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+    .porque-container h2 {
+        margin-bottom: 20px;
+
+        color: var(--azul-principal);
+
+        font-size: 28px;
+    }
+
+    .porque-container p {
+        margin-bottom: 14px;
+
+        color: var(--texto-secundario);
+
+        font-family: var(--fonte-open-sans);
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+
+    /* CHAMADA FINAL */
+
+    .quem-somos-final {
+        padding: 55px 20px;
+
+        background: var(--rosa-principal);
+
+        color: var(--branco);
+
+        text-align: center;
+    }
+
+    .quem-somos-final h2 {
+        margin-bottom: 10px;
+
+        font-size: 26px;
+    }
+
+    .quem-somos-final p {
+        margin-bottom: 25px;
+
+        font-family: var(--fonte-open-sans);
+        font-size: 13px;
+    }
+
+    .quem-somos-final .botao {
+        display: inline-block;
+
+        padding: 10px 30px;
+
+        background: var(--branco);
+
+        color: var(--rosa-principal);
+
+        border-radius: 20px;
+
+        font-size: 12px;
+        font-weight: 700;
+
+        text-decoration: none;
+
+        transition: 0.2s ease;
+    }
+
+    .quem-somos-final .botao:hover {
+        background: var(--rosa-claro);
+
+        transform: translateY(-2px);
+    }
+
+
+    /* RESPONSIVO */
+
+    @media (max-width: 900px) {
+
+        .quem-somos-container {
+            flex-direction: column;
+
+            text-align: center;
+        }
+
+        .quem-somos-content,
+        .quem-somos-image {
+            width: 100%;
+        }
+
+        .quem-somos-image img {
+            max-width: 500px;
+        }
+
+        .quem-somos-cards {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+        .quem-somos {
+            padding: 45px 0;
+        }
+
+        .quem-somos-content h1 {
+            font-size: 30px;
+        }
+
+        .quem-somos-content p {
+            font-size: 13px;
+        }
+
+        .missao-section,
+        .como-funciona,
+        .porque-section {
+            padding: 45px 0;
+        }
+
+        .missao-container h2,
+        .como-funciona-title h2,
+        .porque-container h2 {
+            font-size: 24px;
+        }
+
+    }
