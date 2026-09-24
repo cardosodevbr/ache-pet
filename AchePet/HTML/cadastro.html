@@ -7,6 +7,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
@@ -19,6 +20,7 @@
 <body>
 
     <!-- HEADER -->
+
     <header class="site-header">
 
         <div class="header-container">
@@ -28,9 +30,35 @@
             </a>
 
             <nav class="main-nav">
+
+                <a href="tela-inicial.html">INÍCIO</a>
+
                 <a href="login.html">LOGIN</a>
+
                 <a href="index.html#mural">MURAL</a>
-                <a href="index.html#quem-somos">QUEM SOMOS?</a>
+                <a href="quem-somos.html">QUEM SOMOS?</a>
+
+
+                <div class="nav-dropdown">
+
+                    <a href="#" class="nav-dropdown-link">MURAL</a>
+
+                    <div class="nav-dropdown-menu">
+
+                        <a href="mural-procurados.html" class="menu-procurados">
+                            Animais Procurados
+                        </a>
+
+                        <a href="mural-encontrados.html" class="menu-encontrados">
+                            Animais Encontrados
+                        </a>
+
+                    </div>
+
+                </div>
+
+                
+
             </nav>
 
             <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
@@ -43,53 +71,75 @@
 
 
     <!-- ÁREA DO CADASTRO -->
+
     <main>
 
         <section class="cadastro-section">
 
             <div class="cadastro-container">
 
+                <div class="cadastro-title">
+                    <h1>Crie sua conta</h1>
+                    <p>Encontre, ajude e faça parte do AchePet.</p>
+                </div>
+
                 <div class="cadastro-card">
 
                     <div class="cadastro-fields">
 
-                        <input type="text" placeholder="nome completo">
+                        <div class="cadastro-field">
+                            <label for="nome">Nome completo</label>
+                            <input type="text" id="nome" placeholder="Digite seu nome completo">
+                        </div>
 
-                        <input type="email" placeholder="email">
+                        <div class="cadastro-field">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" placeholder="Digite seu e-mail">
+                        </div>
 
-                        <input type="number" placeholder="CPF">
+                        <div class="cadastro-field">
+                            <label for="cpf">CPF</label>
+                            <input type="text" id="cpf" placeholder="Digite seu CPF">
+                        </div>
 
-                        <input type="text" placeholder="cidade">
+                        <div class="cadastro-field">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade" placeholder="Digite sua cidade">
+                        </div>
 
-                        <input type="password" placeholder="senha">
+                        <div class="cadastro-field">
+                            <label for="senha">Senha</label>
+                            <input type="password" id="senha" placeholder="Digite sua senha">
+                        </div>
 
-                        <input type="password" placeholder="confirmar senha">
+                        <div class="cadastro-field">
+                            <label for="confirmar-senha">Confirmar senha</label>
+                            <input type="password" id="confirmar-senha" placeholder="Digite sua senha novamente">
+                        </div>
 
                     </div>
 
-                    <button class="cadastro-button">
-
-                        <a href="registro.html">REGISTRAR-SE</a>
-
-                    </button>
+                    <a href="registro.html" class="cadastro-button">
+                        REGISTRAR-SE
+                    </a>
 
                 </div>
+
             </div>
 
         </section>
 
 
         <!-- FAIXA ROSA -->
+
         <section class="cadastro-pink-section">
-        </section>
-
-
         </section>
 
     </main>
 
 
     <!-- FOOTER -->
+
     <footer class="site-footer">
 
         <div class="footer-content">
@@ -133,7 +183,6 @@
         </div>
 
     </footer>
-
 
 </body>
 

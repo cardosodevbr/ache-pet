@@ -11,111 +11,213 @@
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <title> Mural Animais Perdidos </title>
+    <title> Mural Animais Encontrados </title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<section class="animais-procurados">
+    <header class="site-header">
+        <div class="header-container">
+            <a href="tela-inicial.html" class="logo">
+                <img src="Media/Logo-imagem.png" alt="AchePet">
+            </a>
+            <nav class="main-nav">
 
-    <h2>Animais Perdidos</h2>
+                <a href="tela-inicial.html">INÍCIO</a>
 
-    <div class="lista-animais">
+                <a href="login.html">LOGIN</a>
 
-        <!-- Animal 1 -->
-        <div class="animal">
-            <img src="Media/Animais Perdidos/Cachorro/Cachorro 1.jpg" alt="Cachorro perdido">
-            <p class="status">PERDIDO</p>
-            <h3>Isac</h3>
-            <p>São Paulo, SP</p>
-            <p>08/09/2026</p>
+                <a href="formulário/form1.html">FORMULÁRIO</a>
+
+                <div class="nav-dropdown">
+
+                    <a href="#" class="nav-dropdown-link">MURAL</a>
+
+                    <div class="nav-dropdown-menu">
+
+
+                        <a href="mural-encontrados.html" class="menu-encontrados">
+                            Animais Encontrados
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <a href="quem-somos.html">QUEM SOMOS?</a>
+
+            </nav>
+            <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- BARRA DE BUSCA -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Animais Perdidos</h1>
+            <p>Ajude a encontrar os pets que estão desaparecidos na sua região.</p>
+
+            <div class="search-box">
+                <div class="search-input">
+                    <span class="search-icon">⌖</span>
+                    <input type="text" id="cidadeBusca" placeholder="busca por cidade">
+                </div>
+
+                <div class="search-buttons">
+                    <button class="btn-lost" id="btnPerdi">PERDI</button>
+                    <button class="btn-found" id="btnEncontrei">ENCONTREI</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MURAL DE ANIMAIS PERDIDOS -->
+    <section class="pets-section lost-section">
+        <div class="section-container">
+
+            <div class="section-title lost-title">
+                <h2>Animais Perdidos</h2>
+                <p>Pets anunciados em São<br>Paulo</p>
+            </div>
+
+            <div class="pets-grid">
+
+                <!-- PET 1 -->
+                <article class="pet-card">
+                    <img src="Media/Animais Perdidos/Cachorro/Cachorro 1.jpg" alt="Cachorro perdido">
+                    <span class="pet-status lost">PERDIDO</span>
+                    <div class="pet-info">
+                        <h3>Isac</h3>
+                        <p>📌 São Paulo, SP</p>
+                        <p>📅 08/09/2026</p>
+                    </div>
+                </article>
+
+                <!-- PET 2 -->
+                <article class="pet-card">
+                    <img src="Media/Animais Perdidos/Cachorro/Cachorro 2.jpg" alt="Cachorro perdido">
+                    <span class="pet-status lost">PERDIDO</span>
+                    <div class="pet-info">
+                        <h3>Bela</h3>
+                        <p>📌São Paulo, SP</p>
+                        <p>📅24/01/2025</p>
+                    </div>
+                </article>
+
+                <!-- PET 3 -->
+                <article class="pet-card">
+                    <img src="Media/Animais Perdidos/Cachorro/Cachorro 3.jpg" alt="Cachorro perdido">
+                    <span class="pet-status lost">PERDIDO</span>
+                    <div class="pet-info">
+                        <h3>Thor</h3>
+                        <p>📌São Paulo, SP</p>
+                        <p>📅19/09/2026</p>
+                    </div>
+                </article>
+
+                <!-- PET 4 -->
+                <article class="pet-card">
+                    <img src="Media/Animais Perdidos/Cachorro/Cachorro 4.jpg" alt="Cachorro perdido">
+                    <span class="pet-status lost">PERDIDO</span>
+                    <div class="pet-info">
+                        <h3>Pipoca</h3>
+                        <p>📌São Paulo, SP</p>
+                        <p>📅03/10/2025</p>
+                    </div>
+                </article>
+
+                <!-- PET 5 -->
+                <article class="pet-card">
+                    <img src="Media/Animais Perdidos/Cachorro/Cachorro 5.jpg" alt="Cachorro perdido">
+                    <span class="pet-status lost">PERDIDO</span>
+                    <div class="pet-info">
+                        <h3>Xandy</h3>
+                        <p>📌São Paulo, SP</p>
+                        <p>📅13/12/2025</p>
+                    </div>
+                </article>
+
+                <!-- PET 6 -->
+                <article class="pet-card">
+                    <img src="Media/Animais Perdidos/Gato/Gato 1.jpg" alt="Gato perdido">
+                    <span class="pet-status lost">PERDIDO</span>
+                    <div class="pet-info">
+                        <h3>Ally</h3>
+                        <p>📌São Paulo, SP</p>
+                        <p>📅10/04/2025</p>
+                    </div>
+                </article>
+
+                <!-- PET 7 -->
+                <article class="pet-card">
+                    <img src="Media/Animais Perdidos/Gato/Gato 2.jpg" alt="Gato perdido">
+                    <span class="pet-status lost">PERDIDO</span>
+                    <div class="pet-info">
+                        <h3>Mel</h3>
+                        <p>📌São Paulo, SP</p>
+                        <p>📅23/06/2026</p>
+                    </div>
+                </article>
+
+                <!-- PET 8 -->
+                <article class="pet-card">
+                    <img src="Media/Animais Perdidos/Gato/Gato 3.jpg" alt="Gato perdido">
+                    <span class="pet-status lost">PERDIDO</span>
+                    <div class="pet-info">
+                        <h3>Dom</h3>
+                        <p>📌São Paulo, SP</p>
+                        <p>📅27/08/2025</p>
+                    </div>
+                </article>
+
+                <!-- PET 9 -->
+                <article class="pet-card">
+                    <img src="Media/Animais Perdidos/Gato/Gato 4.jpg" alt="Gato perdido">
+                    <span class="pet-status lost">PERDIDO</span>
+                    <div class="pet-info">
+                        <h3>Sol</h3>
+                        <p>📌São Paulo, SP</p>
+                        <p>📅04/05/2026</p>
+                    </div>
+                </article>
+
+                <!-- PET 10 -->
+                <article class="pet-card">
+                    <img src="Media/Animais Perdidos/Gato/Gato 5.jpg" alt="Gato perdido">
+                    <span class="pet-status lost">PERDIDO</span>
+                    <div class="pet-info">
+                        <h3>Paçoca</h3>
+                        <p>📌São Paulo, SP</p>
+                        <p>📅15/09/2026</p>
+                    </div>
+                </article>
+
+            </div>
         </div>
 
-        <!-- Animal 2 -->
-        <div class="animal">
-            <img src="Media/Animais Perdidos/Cachorro/Cachorro 2.jpg" alt="Cachorro perdido">
-            <p class="status">PERDIDO</p>
-            <h3>Bela</h3>
-            <p>São Paulo, SP</p>
-            <p>24/01/2025</p>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <img class="footer-logo" src="Media/Logo-com-título-remove.png" alt="AchePet">
+            <nav class="footer-links">
+                <a href="#">💬 Contato</a>
+                <a href="#">👥 Quem somos?</a>
+                <a href="#">🐾 Mural de Pets</a>
+                <a href="login.html">🔐 Entrar</a>
+            </nav>
         </div>
 
-        <!-- Animal 3 -->
-        <div class="animal">
-            <img src="Media/Animais Perdidos/Cachorro/Cachorro 3.jpg" alt="Cachorro perdido">
-            <p class="status">PERDIDO</p>
-            <h3>Thor</h3>
-            <p>São Paulo, SP</p>
-            <p>19/09/2026</p>
+        <div class="footer-bottom">
+            <p>© 2026 Ache meu pet</p>
+            <div class="footer-divider"></div>
+            <p class="footer-message"><span>♡</span> Lorem Ipsum dolor</p>
         </div>
-
-        <!-- Animal 4 -->
-        <div class="animal">
-            <img src="Media/Animais Perdidos/Cachorro/Cachorro 4.jpg" alt="Cachorro perdido">
-            <p class="status">PERDIDO</p>
-            <h3>Pipoca</h3>
-            <p>São Paulo, SP</p>
-            <p>03/10/2025</p>
-        </div>
-
-        <!-- Animal 5 -->
-        <div class="animal">
-            <img src="Media/Animais Perdidos/Cachorro/Cachorro 5.jpg" alt="Cachorro perdido">
-            <p class="status">PERDIDO</p>
-            <h3>Xandy</h3>
-            <p>São Paulo, SP</p>
-            <p>13/12/2025</p>
-        </div>
-
-        <!-- Animal 6 -->
-        <div class="animal">
-            <img src="Media/Animais Perdidos/Gato/Gato 1.jpg" alt="Gato perdido">
-            <p class="status">PERDIDO</p>
-            <h3>Ally</h3>
-            <p>São Paulo, SP</p>
-            <p>10/04/2025</p>
-        </div>
-
-        <!-- Animal 7 -->
-        <div class="animal">
-            <img src="Media/Animais Perdidos/Gato/Gato 2.jpg" alt="Gato perdido">
-            <p class="status">PERDIDO</p>
-            <h3>Mel</h3>
-            <p>São Paulo, SP</p>
-            <p>23/06/2026</p>
-        </div>
-
-        <!-- Animal 8 -->
-        <div class="animal">
-            <img src="Media/Animais Perdidos/Gato/Gato 3.jpg" alt="Gato perdido">
-            <p class="status">PERDIDO</p>
-            <h3>Dom</h3>
-            <p>São Paulo, SP</p>
-            <p>27/08/2025</p>
-        </div>
-
-        <!-- Animal 9 -->
-        <div class="animal">
-            <img src="Media/Animais Perdidos/Gato/Gato 4.jpg" alt="Gato perdido">
-            <p class="status">PERDIDO</p>
-            <h3>Brisa</h3>
-            <p>São Paulo, SP</p>
-            <p>04/05/2026</p>
-        </div>
-
-        <!-- Animal 10 -->
-        <div class="animal">
-            <img src="Media/Animais Perdidos/Gato/Gato 5.jpg" alt="Gato perdido">
-            <p class="status">PERDIDO</p>
-            <h3>Paçoca</h3>
-            <p>São Paulo, SP</p>
-            <p>15/09/2026</p>
-        </div>
-
-    </div>
-
-</section>
+    </footer>
 
 </body>

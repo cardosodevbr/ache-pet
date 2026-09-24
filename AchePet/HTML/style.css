@@ -938,56 +938,149 @@
 
     }
 
-    /* CADASTRO */
+    /* LOGIN / CADASTRO */
 
-    .cadastro-section {
-        min-height: 280px;
+.cadastro-section {
+    min-height: 430px;
 
-        padding: 35px 20px 45px;
+    padding: 55px 20px;
 
-        background: var(--fundo-azul);
+    background: linear-gradient(
+        135deg,
+        var(--fundo-azul),
+        var(--branco)
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadastro-container {
+    width: 100%;
+    max-width: 850px;
+}
+
+.cadastro-card {
+    width: 100%;
+    max-width: 700px;
+
+    padding: 40px 50px;
+
+    box-sizing: border-box;
+
+    background: var(--azul-principal);
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 auto;
+}
+
+.cadastro-title {
+    width: 100%;
+
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.cadastro-title h1 {
+    margin: 0 0 8px;
+
+    color: var(--azul-principal);
+
+    font-family: var(--fonte-poppins);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.cadastro-title p {
+    margin: 0;
+
+    color: rgba(59, 102, 244, 0.9);
+
+    font-family: var(--fonte-open-sans);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.cadastro-fields {
+    width: 100%;
+    max-width: 550px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cadastro-field {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+
+    box-sizing: border-box;
+}
+
+.cadastro-field label {
+    color: var(--branco);
+
+    font-family: var(--fonte-poppins);
+    font-size: 12px;
+    font-weight: 600;
+
+    padding-left: 5px;
+}
+
+
+    /* LOGIN */
+
+    #note {
+        width: 100%;
 
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+
+        gap: 55px;
     }
 
-    .cadastro-container {
-        width: 100%;
-        max-width: 400px;
+
+    /* LADO DOS CAMPOS */
+
+    #note>div:first-child {
+        width: 55%;
     }
 
-    .cadastro-card {
-        width: 100%;
-
-        padding: 32px 26px 20px;
-
-        background: var(--azul-principal);
-
-        border-radius: 10px;
-
+    #note>div:first-child>div {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .cadastro-fields {
+
+    /* CAMPOS */
+
+    #note .teno {
         width: 100%;
+        max-width: 380px;
 
-        display: flex;
-        flex-direction: column;
+        height: 45px;
 
-        gap: 25px;
-    }
+        margin: 8px 0;
 
-    .cadastro-fields input {
-        width: 100%;
-        height: 30px;
-
-        padding: 0 15px;
+        padding: 0 18px;
 
         border: none;
-        border-radius: 20px;
+        border-radius: 25px;
 
         outline: none;
 
@@ -995,11 +1088,132 @@
         color: var(--preto);
 
         font-family: var(--fonte-open-sans);
-        font-size: 10px;
+        font-size: 13px;
+
+        transition: 0.2s ease;
     }
 
+    #note .teno:focus {
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+    }
+
+    #note .teno::placeholder {
+        color: #666666;
+    }
+
+
+    /* BOTÃO ENTRAR */
+
+    #note #teno-button {
+        width: 220px;
+        height: 44px;
+
+        margin: 18px 0 0;
+
+        border: 2px solid var(--rosa-principal);
+        border-radius: 25px;
+
+        background-color: var(--rosa-principal);
+        color: var(--branco);
+
+        font-family: var(--fonte-poppins);
+        font-size: 13px;
+        font-weight: 700;
+
+        cursor: pointer;
+
+        transition: all 0.2s ease;
+    }
+
+    #note #teno-button:hover {
+        background-color: var(--branco);
+        color: var(--rosa-principal);
+
+        border-color: var(--branco);
+
+        transform: translateY(-2px);
+    }
+
+    /* LADO DA IMAGEM E LINKS */
+
+    #note>div:last-child img {
+        width: 200px;
+        height: 200px;
+
+        object-fit: cover;
+
+        margin-bottom: 10px;
+
+        border-radius: 25px;
+
+        display: block;
+
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+
+        transition: transform 0.3s ease;
+    }
+
+    #note>div:last-child img:hover {
+        transform: rotate(-2deg) scale(1.04);
+    }
+
+    /* LINKS */
+
+    #note>div:last-child a {
+        display: block;
+
+        color: var(--branco);
+
+        font-family: var(--fonte-open-sans);
+        font-size: 13px;
+        font-weight: 600;
+
+        text-decoration: none;
+
+        margin-top: 2px;
+
+        transition: 0.2s ease;
+    }
+
+    #note>div:last-child a:hover {
+        color: var(--rosa-principal);
+        text-decoration: none;
+    }
+
+
+    /* OUTRAS TELAS DE CADASTRO */
+
     .cadastro-card p {
-        color: #fff;
+        color: var(--branco);
+    }
+
+    .cadastro-fields input {
+        width: 100%;
+        height: 42px;
+
+        padding: 0 18px;
+
+        border: none;
+        border-radius: 22px;
+        outline: none;
+
+        background: var(--branco);
+        color: var(--preto);
+
+        font-family: var(--fonte-open-sans);
+        font-size: 13px;
+
+        box-sizing: border-box;
+
+        transition: 0.2s ease;
+    }
+
+    .cadastro-fields input:focus {
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+    }
+
+    .cadastro-fields input::placeholder {
+        color: #666666;
     }
 
     .cadastro-fields input::placeholder {
@@ -1008,56 +1222,44 @@
 
     .cadastro-button {
         width: 230px;
-        height: 27px;
+        height: 42px;
 
-        margin-top: 35px;
+        margin-top: 25px;
 
-        border: 1px solid var(--branco);
-        border-radius: 20px;
+        border: 2px solid var(--rosa-principal);
+        border-radius: 22px;
 
         background: var(--rosa-principal);
         color: var(--branco);
 
         font-family: var(--fonte-poppins);
-        font-size: 12px;
+        font-size: 13px;
         font-weight: 700;
 
         cursor: pointer;
+        text-decoration: none;
 
-        transition: 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: all 0.2s ease;
     }
 
     .cadastro-button:hover {
-        background: var(--botao-hover-rosa);
-        transform: translateY(-1px);
+        background: var(--branco);
+        color: var(--rosa-principal);
+        border-color: var(--branco);
+
+        transform: translateY(-2px);
     }
 
 
-    /*FAIXA ROSA DO CADASTRO */
-
-    .cadastro-pink-section {
-        height: 110px;
-
-        background: var(--fundo-rosa);
-    }
-
-
-    /* AJUSTE DO FOOTER NO CADASTRO */
-
-    .cadastro-section+.cadastro-pink-section+.site-footer {
-        margin-top: 0;
-    }
-
-    /* para a tela de digitar o codigo */
-    #note {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-    }
+    /* BOTÃO DA TELA DE CÓDIGO */
 
     #note-button {
         background-color: #f881b0;
+
         width: 110%;
         height: 28px;
 
@@ -1067,79 +1269,376 @@
         outline: none;
     }
 
-    .teno {
-        margin: 8px;
-    }
 
-    #teno-button {
-        background-color: #E9166B;;
-        width: 65%;
-        height: 25px;
+    /* =========================
+   FAIXA ROSA
+   ========================= */
 
-        border: none;
-        border-radius: 20px;
+    .cadastro-pink-section {
+        height: 90px;
 
-        outline: none;
+        background: var(--fundo-rosa);
     }
 
 
-    /* RESPONSIVO - CADASTRO */
+    /* AJUSTE DO FOOTER */
 
-    @media (max-width: 600px) {
+    .cadastro-section+.cadastro-pink-section+.site-footer {
+        margin-top: 0;
+    }
+
+
+    /* =========================
+   RESPONSIVO
+   ========================= */
+
+    @media (max-width: 700px) {
 
         .cadastro-section {
-            min-height: 280px;
+            min-height: auto;
 
-            padding: 35px 20px 45px;
+            padding: 40px 20px;
         }
 
         .cadastro-container {
-            max-width: 400px;
+            max-width: 500px;
         }
 
         .cadastro-card {
-            padding: 32px 25px 20px;
+            padding: 35px 25px;
         }
 
-        .cadastro-button {
-            width: 60%;
+        #note {
+            flex-direction: column;
+
+            gap: 30px;
+        }
+
+        #note>div:first-child,
+        #note>div:last-child {
+            width: 100%;
+        }
+
+        #note>div:first-child>div {
+            align-items: center;
+        }
+
+        #note .teno {
+            max-width: 100%;
+        }
+
+        #note>div:last-child {
+            order: -1;
+        }
+
+        #note>div:last-child img {
+            width: 100px;
+            height: 100px;
+        }
+
+        #teno-button {
+            width: 200px;
         }
 
         .cadastro-pink-section {
-            height: 108px;
+            height: 70px;
         }
+    }
 
+    /* Mural animais - Botão Ver Mais */
+
+    .ver-mais-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 35px;
+    }
+
+    .btn-ver-mais {
+        padding: 10px 40px;
+        background: transparent;
+        color: var(--azul-principal);
+        border: 2px solid var(--azul-principal);
+        border-radius: 25px;
+        text-decoration: none;
+        font-family: var(--fonte-poppins);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        transition: 0.25s ease;
+    }
+
+    .btn-ver-mais:hover {
+        background: var(--azul-principal);
+        color: var(--branco);
+    }
+
+    /* Mural animais - Botão rosa */
+
+    .lost-section .btn-ver-mais {
+        background: transparent;
+        color: var(--rosa-principal);
+        border: 2px solid var(--rosa-principal);
+        box-shadow: none;
+    }
+
+    .lost-section .btn-ver-mais:hover {
+        background: var(--rosa-principal);
+        color: var(--branco);
+        box-shadow: none;
+    }
+
+    /* QUEM SOMOS */
+
+    .quem-somos {
+        background: var(--fundo-azul);
+        padding: 70px 0;
+    }
+
+    .quem-somos-container {
+        width: 92%;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 60px;
+    }
+
+    .quem-somos-content {
+        width: 55%;
+    }
+
+    .quem-somos-label {
+        display: inline-block;
+
+        margin-bottom: 8px;
+
+        color: var(--rosa-principal);
+
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .quem-somos-content h1 {
+        margin-bottom: 20px;
+
+        color: var(--azul-principal);
+
+        font-size: 38px;
+        font-weight: 700;
+    }
+
+    .quem-somos-content p {
+        margin-bottom: 15px;
+
+        color: var(--texto-secundario);
+
+        font-family: var(--fonte-open-sans);
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .quem-somos-image {
+        width: 40%;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .quem-somos-image img {
+        width: 100%;
+        max-width: 430px;
+
+        border-radius: 18px;
+
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
     }
 
 
-/*Imagens Animais Perdidos*/
+    /* NOSSA MISSÃO */
 
-.lista-animais {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-}
+    .missao-section {
+        padding: 60px 0;
 
-.animal {
-    overflow: hidden;
-    background: var(--branco);
-    border-radius: 14px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-}
+        background: var(--fundo-rosa);
 
-.animal img {
-    width: 100%;
-    height: 145px;
-    display: block;
-    object-fit: cover;
-}
+        text-align: center;
+    }
 
-.animal .status {
-    display: block;
-    background-color: var(--rosa-principal);
-    color: var(--branco);
-    text-align: center;
-}
+    .missao-container {
+        width: 92%;
+        max-width: 850px;
+
+        margin: 0 auto;
+    }
+
+    .missao-container h2 {
+        margin-bottom: 15px;
+
+        color: var(--rosa-principal);
+
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    .missao-container p {
+        color: var(--texto-secundario);
+
+        font-family: var(--fonte-open-sans);
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+
+    /* COMO FUNCIONA */
+
+    .como-funciona {
+        padding: 65px 0;
+
+        background: var(--fundo-azul);
+    }
+
+    .como-funciona-container {
+        width: 92%;
+        max-width: 1200px;
+
+        margin: 0 auto;
+    }
+
+    .como-funciona-title {
+        margin-bottom: 30px;
+
+        text-align: center;
+    }
+
+    .como-funciona-title h2 {
+        color: var(--azul-principal);
+
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    .como-funciona-title p {
+        margin-top: 5px;
+
+        color: var(--texto-secundario);
+
+        font-family: var(--fonte-open-sans);
+        font-size: 13px;
+    }
+
+    .quem-somos-cards {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 22px;
+    }
+
+    .quem-somos-card {
+        padding: 30px 25px;
+
+        background: var(--branco);
+
+        border-radius: 14px;
+
+        text-align: center;
+
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+        transition: transform 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+
+    .quem-somos-card:hover {
+        transform: translateY(-4px);
+
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .quem-somos-icon {
+        width: 55px;
+        height: 55px;
+
+        margin: 0 auto 15px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: var(--rosa-claro);
+
+        border-radius: 50%;
+
+        font-size: 25px;
+    }
+
+    .quem-somos-card h3 {
+        margin-bottom: 10px;
+
+        color: var(--azul-principal);
+
+        font-size: 17px;
+    }
+
+    .quem-somos-card p {
+        color: var(--texto-secundario);
+
+        font-family: var(--fonte-open-sans);
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+
+    /* POR QUE CRIAMOS */
+
+    .porque-section {
+        padding: 65px 0;
+
+        background: var(--branco);
+    }
+
+    .porque-container {
+        width: 92%;
+        max-width: 900px;
+
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+    .porque-container h2 {
+        margin-bottom: 20px;
+
+        color: var(--azul-principal);
+
+        font-size: 28px;
+    }
+
+    .porque-container p {
+        margin-bottom: 14px;
+
+        color: var(--texto-secundario);
+
+        font-family: var(--fonte-open-sans);
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+
+    /* CHAMADA FINAL */
+
+    .quem-somos-final {
+        padding: 55px 20px;
+
+        background: var(--rosa-principal);
+
+        color: var(--branco);
+
+        text-align: center;
+    }
 
 /*Imagens Animais Encontrados*/
 
@@ -1168,167 +1667,104 @@
     text-align: center;
 }
 
+        .quem-somos-content,
+        .quem-somos-image {
+            width: 100%;
+        }
 
-#formulario-container {
-    background-color: var(--azul-claro);
-    display: flex;
-    align-items: center;
-    flex-direction:column;
-}
+        .quem-somos-image img {
+            max-width: 500px;
+        }
 
-#patinha-rosa {
-    width: 80px;
-    height: auto;   
-}
-
-.formulario-enunciado{
-    display: flex;
-    align-items: center;    
-
-    margin-bottom: 20px;
-    
-}
-
-.formulario-enunciado-texto {
-    text-align: left;
-}
-
-.formulario-enunciado-texto h1 {
-    font-size: 28px;
-    color:#C9125D;
-    padding-left: 20px;
-}
-
-.formulario-enunciado-texto p {
-    font-size: 18px;
-    color:#C9125D;
-    padding-left: 20px;
-}
-
-.formulario-selecao {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-
-    width: 800px;
-    
-    border: 2px solid #0873BE;
+        .quem-somos-cards {
+            grid-template-columns: 1fr;
+        }
 
 
-    background-color: var(--branco);
-    border-radius: 15px;
-}
+    @media (max-width: 600px) {
 
-#perdido {
-   border: 2px solid var(--azul-escuro);
-   margin: 20px 0px 20px 0;
-}
+        .quem-somos {
+            padding: 45px 0;
+        }
 
-#encontrado {
-    border: 2px solid var(--azul-escuro);
-    margin: 20px 0px 20px 0;   
-}
+        .quem-somos-content h1 {
+            font-size: 30px;
+        }
 
+        .quem-somos-content p {
+            font-size: 13px;
+        }
 
-.formulario-selecao label {
-    position: relative; 
-    width: 280px;
-    height: 280px;
+        .missao-section,
+        .como-funciona,
+        .porque-section {
+            padding: 45px 0;
+        }
 
-    border: 2px solid var(--azul-escuro);
-    border-radius: 8px;
+        .missao-container h2,
+        .como-funciona-title h2,
+        .porque-container h2 {
+            font-size: 24px;
+        }
 
-    background-color: var(--azul-claro);
+    }
 
-    cursor: pointer;
+    /* MENU DROPDOWN DO MURAL */
 
-    text-align: center;
-}
+    .nav-dropdown {
+        position: relative;
+    }
 
-.formulario-selecao input {
-    position: absolute;
+    .nav-dropdown-menu {
+        display: none;
 
-    top: 10px;
-    left: 10px;
+        position: absolute;
+        top: 100%;
+        left: 0;
 
-    margin: 0;
+        min-width: 200px;
 
-    z-index: 2;
-    color:#0873BE
-}
+        padding: 10px 0;
 
-#icon-procurado-azul {
-    width: 100px;
-    text-align: center;
-}
+        background-color: var(--branco);
 
-#icon-encontrado-azul{
-    width: 100px;
-    text-align: center;
-}
+        border-radius: 10px;
 
-#icon-procurado-rosa{
-    display: none;
-}
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 
+        z-index: 1000;
+    }
 
-#icon-encontrado-rosa{
-    display: none;
-}
+    .nav-dropdown-menu a {
+        display: block;
 
-.tipo-conteudo {
-    color: #0873BE;
-}
+        padding: 10px 15px;
 
-#btn-formulario{
-    width: 100%;
+        color: var(--preto);
 
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    margin: 10px 10px 15px 10px;
-}
+        text-decoration: none;
 
-#btn-formulario1{
-    background-color: var(--azul-claro);
-    border: 1px solid var(--azul-escuro);
-    border-radius: 5px;
-    padding: 10px 20px;
-    color: var(--azul-escuro);
-    font-weight: bolder;
-}
+        font-family: var(--fonte-poppins);
+        font-size: 13px;
+        font-weight: 600;
+    }
 
-#btn-formulario2 {
-    background-color: #0873BE;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 22px;
-    color: white;
-    font-weight: bolder;
-    text-align: left;
-}
+    /* ANIMAIS PROCURADOS */
 
-#btn-formulario1:hover{
-    background-color: var(--azul-claro);
-    pointer: var(--botao-hover-rosa);
-}
+    .nav-dropdown-menu .menu-procurados:hover {
+        background-color: var(--rosa-claro);
+        color: var(--rosa-principal);
+    }
 
-.titulo-situacao {
-    width: 100%;
-    flex-basis: 100%;
-    
-    background-color: var(--azul-escuro);
-    color: var(--branco);
+    /* ANIMAIS ENCONTRADOS */
 
-    padding: 5px 20px;
+    .nav-dropdown-menu .menu-encontrados:hover {
+        background-color: var(--azul-claro);
+        color: var(--azul-principal);
+    }
 
-    font-size: 16px;
-    
+    /* MOSTRA O DROPDOWN AO PASSAR O MOUSE */
 
-    text-align: left;
-
-    border-radius: 8px 8px 0 0;
-}
-
-
+    .nav-dropdown:hover .nav-dropdown-menu {
+        display: block;
+    }
