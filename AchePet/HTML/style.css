@@ -1067,6 +1067,21 @@
         outline: none;
     }
 
+    .teno {
+        margin: 8px;
+    }
+
+    #teno-button {
+        background-color: #E9166B;;
+        width: 65%;
+        height: 25px;
+
+        border: none;
+        border-radius: 20px;
+
+        outline: none;
+    }
+
 
     /* RESPONSIVO - CADASTRO */
 
