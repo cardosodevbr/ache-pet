@@ -26,7 +26,7 @@
 
                 <a href="login.html">LOGIN</a>
 
-                <a href="form1.html">FORMULÁRIO</a>
+                <a href="form1.html">CADASTRAR ANIMAL</a>
 
                 <a href="#mural">MURAL</a>
 
@@ -44,26 +44,55 @@
 
     <container id="formulario-container">
 
-        <div class="formulario-enunciado">
 
-            <div class="formulario-enunciado-pata">
-                <img>
+            <div class="formulario-enunciado">
+
+                <img src="Media/patinha-rosa.png" id="patinha-rosa">
+            
+
+                <div class="formulario-enunciado-texto">
+
+                    <h1>Cadastrar seu animal</h1>
+                    
+                    <p>Cadastre um animal perdido ou encontrado e ajude a conectá-lo novamente à sua família.</p>
+
+                </div>
+
             </div>
-
-            <div class="formulario-enunciado-texto">
-
-                <h1>Cadastrar seu animal</h1>
-                
-                <p>Cadastre um animal perdido ou encontrado e ajude a conectá-lo novamente à sua família.</p>
-
-            </div>
-
-        </div>
-
-        <div class="formulario-enunciado">
-
-        </div>
         
+            <div class="formulario-selecao">
+             
+            <label id="perdido">
+                <input type="radio" name="status" value="perdido">
+
+                <div class="tipo-conteudo">
+                    <img src="Media/icon-procurado.png" id="icon-procurado-azul">
+                    <img src="Media/icon-procurado-rosa.png" id="icon-procurado-rosa">
+
+                    <h2>Procurado</h2>
+                    <p>O animal desapareceu e<br>
+                        está sendo procurado.</p>
+                </div>
+                
+            </label>
+           
+
+            
+            <label id="encontrado">
+
+                <input type="radio" name="status" value="encontrado">
+
+                <div class="tipo-conteudo">
+                    <img src="Media/icon-encontrado.png" id="icon-encontrado-azul">
+                    <img src="Media/icon-encontrado-rosa.png" id="icon-encontrado-rosa">
+
+                    <h2>Encontrado</h2>
+                    <p>O animal foi encontrado e<br>
+                        está em segurança.</p>
+                </div>
+            </label>
+        </div>
+
 
 
     </container>

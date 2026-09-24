@@ -1153,3 +1153,91 @@
     text-align: center;
 }
 
+
+#formulario-container {
+    background-color: var(--azul-claro);
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+
+#patinha-rosa {
+    width: 65px;
+    height: auto;   
+}
+
+.formulario-enunciado{
+    display: flex;
+    align-items: center;
+
+    height: auto;
+
+    margin-bottom: 30px;
+}
+
+.formulario-enunciado-texto {
+    align-items: center;
+    text-align: left;
+    height: 50px;
+}
+
+.formulario-enunciado-texto h1 {
+    font-size: 34px;
+    color:#C9125D;
+    padding-left: 20px;
+}
+
+.formulario-enunciado-texto p {
+    font-size: 18px;
+    color:#C9125D;
+    padding-left: 20px;
+}
+
+.formulario-selecao {
+    flex-direction: row;
+    display: flex;
+    gap: 15px;
+    border: 2px var(--azul-escuro);
+}
+
+.formulario-selecao label {
+    position: relative;
+
+    width: 280px;
+    height: 280px;
+
+    border: 2px solid var(--azul-escuro);
+    border-radius: 8px;
+
+    background-color: var(--azul-claro);
+
+    cursor: pointer;
+}
+
+.formulario-selecao input {
+    position: absolute;
+
+    top: 10px;
+    left: 10px;
+
+    margin: 0;
+
+    z-index: 2;
+}
+
+#icon-procurado-rosa{
+    display: none;
+}
+
+
+#icon-encontrado-rosa{
+    display: none;
+}
+
+.tipo-conteudo {
+    color: #0873BE;
+}
+
+
