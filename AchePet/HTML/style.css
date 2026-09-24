@@ -1174,32 +1174,27 @@
     display: flex;
     align-items: center;
     flex-direction:column;
-    padding-left: 250px;
-    padding-right: 250px;
 }
 
 #patinha-rosa {
-    width: 65px;
+    width: 80px;
     height: auto;   
 }
 
 .formulario-enunciado{
     display: flex;
-    align-items: center;
+    align-items: center;    
 
-    height: auto;
-
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    
 }
 
 .formulario-enunciado-texto {
-    align-items: center;
     text-align: left;
-    height: 50px;
 }
 
 .formulario-enunciado-texto h1 {
-    font-size: 34px;
+    font-size: 28px;
     color:#C9125D;
     padding-left: 20px;
 }
@@ -1211,15 +1206,33 @@
 }
 
 .formulario-selecao {
-    flex-direction: row;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
-    border: 2px var(--azul-escuro);
+
+    width: 800px;
+    
+    border: 2px solid #0873BE;
+
+
+    background-color: var(--branco);
+    border-radius: 15px;
 }
 
-.formulario-selecao label {
-    position: relative;
+#perdido {
+   border: 2px solid var(--azul-escuro);
+   margin: 20px 0px 20px 0;
+}
 
+#encontrado {
+    border: 2px solid var(--azul-escuro);
+    margin: 20px 0px 20px 0;   
+}
+
+
+.formulario-selecao label {
+    position: relative; 
     width: 280px;
     height: 280px;
 
@@ -1229,6 +1242,8 @@
     background-color: var(--azul-claro);
 
     cursor: pointer;
+
+    text-align: center;
 }
 
 .formulario-selecao input {
@@ -1240,6 +1255,17 @@
     margin: 0;
 
     z-index: 2;
+    color:#0873BE
+}
+
+#icon-procurado-azul {
+    width: 100px;
+    text-align: center;
+}
+
+#icon-encontrado-azul{
+    width: 100px;
+    text-align: center;
 }
 
 #icon-procurado-rosa{
@@ -1253,6 +1279,56 @@
 
 .tipo-conteudo {
     color: #0873BE;
+}
+
+#btn-formulario{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 10px 10px 15px 10px;
+}
+
+#btn-formulario1{
+    background-color: var(--azul-claro);
+    border: 1px solid var(--azul-escuro);
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: var(--azul-escuro);
+    font-weight: bolder;
+}
+
+#btn-formulario2 {
+    background-color: #0873BE;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 22px;
+    color: white;
+    font-weight: bolder;
+    text-align: left;
+}
+
+#btn-formulario1:hover{
+    background-color: var(--azul-claro);
+    pointer: var(--botao-hover-rosa);
+}
+
+.titulo-situacao {
+    width: 100%;
+    flex-basis: 100%;
+    
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+
+    padding: 5px 20px;
+
+    font-size: 16px;
+    
+
+    text-align: left;
+
+    border-radius: 8px 8px 0 0;
 }
 
 
