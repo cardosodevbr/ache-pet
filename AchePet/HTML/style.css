@@ -1649,3 +1649,63 @@
         }
 
     }
+
+/* MENU DROPDOWN DO MURAL */
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-menu {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    min-width: 200px;
+
+    padding: 10px 0;
+
+    background-color: var(--branco);
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    z-index: 1000;
+}
+
+.nav-dropdown-menu a {
+    display: block;
+
+    padding: 10px 15px;
+
+    color: var(--preto);
+
+    text-decoration: none;
+
+    font-family: var(--fonte-poppins);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* ANIMAIS PROCURADOS */
+
+.nav-dropdown-menu .menu-procurados:hover {
+    background-color: var(--rosa-claro);
+    color: var(--rosa-principal);
+}
+
+/* ANIMAIS ENCONTRADOS */
+
+.nav-dropdown-menu .menu-encontrados:hover {
+    background-color: var(--azul-claro);
+    color: var(--azul-principal);
+}
+
+/* MOSTRA O DROPDOWN AO PASSAR O MOUSE */
+
+.nav-dropdown:hover .nav-dropdown-menu {
+    display: block;
+}

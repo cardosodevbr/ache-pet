@@ -18,187 +18,206 @@
 
 <body>
 
-<header class="site-header">
-    <div class="header-container">
-        <a href="tela-inicial.html" class="logo">
-            <img src="Media/Logo-imagem.png" alt="AchePet">
-        </a>
-    <nav class="main-nav">
-        <a href="login.html">LOGIN</a>
-        <a href="formulário/form1.html">FORMULÁRIO</a>
-        <a href="mural-procurados.html">MURAL</a>
-        <a href="quem-somos.html">QUEM SOMOS?</a>
-    </nav>
-        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
-        <span></span>
-        </button>
-    </div>
-</header>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="tela-inicial.html" class="logo">
+                <img src="Media/Logo-imagem.png" alt="AchePet">
+            </a>
+            <nav class="main-nav">
 
-<!-- BARRA DE BUSCA -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>Animais Encontrados</h1>
-        <p>Ajude a encontrar os pets que estão desaparecidos na sua região.</p>
+                <a href="tela-inicial.html">INÍCIO</a>
 
-        <div class="search-box">
-            <div class="search-input">
-            <span class="search-icon">⌖</span>
-            <input type="text" id="cidadeBusca" placeholder="busca por cidade">
+                <a href="login.html">LOGIN</a>
+
+                <a href="formulário/form1.html">FORMULÁRIO</a>
+
+                <div class="nav-dropdown">
+
+                    <a href="#" class="nav-dropdown-link">MURAL</a>
+
+                    <div class="nav-dropdown-menu">
+
+                        <a href="mural-procurados.html" class="menu-procurados">
+                            Animais Procurados
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <a href="quem-somos.html">QUEM SOMOS?</a>
+
+            </nav>
+            <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- BARRA DE BUSCA -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Animais Encontrados</h1>
+            <p>Ajude a encontrar os pets que estão desaparecidos na sua região.</p>
+
+            <div class="search-box">
+                <div class="search-input">
+                    <span class="search-icon">⌖</span>
+                    <input type="text" id="cidadeBusca" placeholder="busca por cidade">
+                </div>
+
+                <div class="search-buttons">
+                    <button class="btn-lost" id="btnPerdi">FILTROS</button>
+                    <button class="btn-found" id="btnEncontrei">BUSCAR</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- MURAL DE ANIMAIS ENCONTRADOS -->
+    <section class="pets-section found-section">
+        <div class="section-container">
+
+            <div class="section-title found-title">
+                <h2>Animais Encontrados</h2>
+                <p>Pets anunciados em São<br>Paulo</p>
             </div>
 
-        <div class="search-buttons">
-            <button class="btn-lost" id="btnPerdi">FILTROS</button>
-            <button class="btn-found" id="btnEncontrei">BUSCAR</button>
+            <div class="pets-grid">
+
+                <!-- PET 1 -->
+                <article class="pet-card">
+                    <img src="Media/Animais Encontrados/Outros/Coelho 1.jpg" alt="Coelho encontrado">
+                    <span class="pet-status found">ENCONTRADO</span>
+                    <div class="pet-info">
+                        <h3>Nick</h3>
+                        <p>📌 São Paulo, SP</p>
+                        <p>📅 02/08/2026</p>
+                    </div>
+                </article>
+
+                <!-- PET 2 -->
+                <article class="pet-card">
+                    <img src="Media/Animais Encontrados/Outros/Coelho 2.jpg" alt="Coelho encontrado">
+                    <span class="pet-status found">ENCONTRADO</span>
+                    <div class="pet-info">
+                        <h3>Lili</h3>
+                        <p>📌 São Paulo, SP</p>
+                        <p>📅 27/12/2025</p>
+                    </div>
+                </article>
+
+                <!-- PET 3 -->
+                <article class="pet-card">
+                    <img src="Media/Animais Encontrados/Gato/Gato 6.png" alt="Gato encontrado">
+                    <span class="pet-status found">ENCONTRADO</span>
+                    <div class="pet-info">
+                        <h3>Amora</h3>
+                        <p>📌 São Paulo, SP</p>
+                        <p>📅 07/08/2026</p>
+                    </div>
+                </article>
+
+                <!-- PET 4 -->
+                <article class="pet-card">
+                    <img src="Media/Animais Encontrados/Gato/Gato 7.jpg" alt="Gato encontrado">
+                    <span class="pet-status found">ENCONTRADO</span>
+                    <div class="pet-info">
+                        <h3>Bob</h3>
+                        <p>📌 São Paulo, SP</p>
+                        <p>📅 18/09/2025</p>
+                    </div>
+                </article>
+
+                <!-- PET 5 -->
+                <article class="pet-card">
+                    <img src="Media/Animais Encontrados/Gato/Gato 8.jpg" alt="Gato encontrado">
+                    <span class="pet-status found">ENCONTRADO</span>
+                    <div class="pet-info">
+                        <h3>Edu</h3>
+                        <p>📌 São Paulo, SP</p>
+                        <p>📅 19/06/2026</p>
+                    </div>
+                </article>
+
+                <!-- PET 6 -->
+                <article class="pet-card">
+                    <img src="Media/Animais Encontrados/Cachorro/Cachorro 6.jpg" alt="Cachorro encontrado">
+                    <span class="pet-status found">ENCONTRADO</span>
+                    <div class="pet-info">
+                        <h3>Eddie</h3>
+                        <p>📌 São Paulo, SP</p>
+                        <p>📅 11/06/2025</p>
+                    </div>
+                </article>
+
+                <!-- PET 7 -->
+                <article class="pet-card">
+                    <img src="Media/Animais Encontrados/Cachorro/Cachorro 7.jpg" alt="Cachorro encontrado">
+                    <span class="pet-status found">ENCONTRADO</span>
+                    <div class="pet-info">
+                        <h3>Susie</h3>
+                        <p>📌 São Paulo, SP</p>
+                        <p>📅 24/04/2026</p>
+                    </div>
+                </article>
+
+                <!-- PET 8 -->
+                <article class="pet-card">
+                    <img src="Media/Animais Encontrados/Cachorro/Cachorro 8.jpg" alt="Cachorro encontrado">
+                    <span class="pet-status found">ENCONTRADO</span>
+                    <div class="pet-info">
+                        <h3>Nina</h3>
+                        <p>📌 São Paulo, SP</p>
+                        <p>📅 30/08/2026</p>
+                    </div>
+                </article>
+
+                <!-- PET 9 -->
+                <article class="pet-card">
+                    <img src="Media/Animais Encontrados/Cachorro/Cachorro 9.jpg" alt="Cachorro encontrado">
+                    <span class="pet-status found">ENCONTRADO</span>
+                    <div class="pet-info">
+                        <h3>Cacau</h3>
+                        <p>📌 São Paulo, SP</p>
+                        <p>📅 04/05/2026</p>
+                    </div>
+                </article>
+
+                <!-- PET 10 -->
+                <article class="pet-card">
+                    <img src="Media/Animais Encontrados/Cachorro/Cachorro 10.jpg" alt="Cachorro encontrado">
+                    <span class="pet-status found">ENCONTRADO</span>
+                    <div class="pet-info">
+                        <h3>Nick</h3>
+                        <p>📌 São Paulo, SP</p>
+                        <p>📅 15/05/2026</p>
+                    </div>
+                </article>
+
+            </div>
         </div>
 
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <img class="footer-logo" src="Media/Logo-com-título-remove.png" alt="AchePet">
+            <nav class="footer-links">
+                <a href="#">💬 Contato</a>
+                <a href="#">👥 Quem somos?</a>
+                <a href="#">🐾 Mural de Pets</a>
+                <a href="login.html">🔐 Entrar</a>
+            </nav>
         </div>
-    </div>
-</section>
 
-
-<!-- MURAL DE ANIMAIS ENCONTRADOS -->
-<section class="pets-section found-section">
-    <div class="section-container">
-
-        <div class="section-title found-title">
-            <h2>Animais Encontrados</h2>
-            <p>Pets anunciados em São<br>Paulo</p>
+        <div class="footer-bottom">
+            <p>© 2026 Ache meu pet</p>
+            <div class="footer-divider"></div>
+            <p class="footer-message"><span>♡</span> Lorem Ipsum dolor</p>
         </div>
-
-    <div class="pets-grid">
-
-<!-- PET 1 -->
-<article class="pet-card">
-    <img src="Media/Animais Encontrados/Outros/Coelho 1.jpg" alt="Coelho encontrado">
-        <span class="pet-status found">ENCONTRADO</span>
-            <div class="pet-info">
-                <h3>Nick</h3>
-                <p>📌 São Paulo, SP</p>
-                <p>📅 02/08/2026</p>
-            </div>
-</article>
-
-<!-- PET 2 -->
-<article class="pet-card">
-    <img src="Media/Animais Encontrados/Outros/Coelho 2.jpg" alt="Coelho encontrado">
-        <span class="pet-status found">ENCONTRADO</span>
-            <div class="pet-info">
-                <h3>Lili</h3>
-                <p>📌 São Paulo, SP</p>
-                <p>📅 27/12/2025</p>
-            </div>
-</article>
-
-<!-- PET 3 -->
-<article class="pet-card">
-    <img src="Media/Animais Encontrados/Gato/Gato 6.png" alt="Gato encontrado">
-        <span class="pet-status found">ENCONTRADO</span>
-            <div class="pet-info">
-                <h3>Amora</h3>
-                <p>📌 São Paulo, SP</p>
-                <p>📅 07/08/2026</p>
-            </div>
-</article>
-
-<!-- PET 4 -->
-<article class="pet-card">
-    <img src="Media/Animais Encontrados/Gato/Gato 7.jpg" alt="Gato encontrado">
-        <span class="pet-status found">ENCONTRADO</span>
-            <div class="pet-info">
-                <h3>Bob</h3>
-                <p>📌 São Paulo, SP</p>
-                <p>📅 18/09/2025</p>
-            </div>
-</article>
-
-<!-- PET 5 -->
-<article class="pet-card">
-    <img src="Media/Animais Encontrados/Gato/Gato 8.jpg" alt="Gato encontrado">
-        <span class="pet-status found">ENCONTRADO</span>
-            <div class="pet-info">
-                <h3>Edu</h3>
-                <p>📌 São Paulo, SP</p>
-                <p>📅 19/06/2026</p>
-            </div>
-</article>
-
-<!-- PET 6 -->
-<article class="pet-card">
-    <img src="Media/Animais Encontrados/Cachorro/Cachorro 6.jpg" alt="Cachorro encontrado">
-        <span class="pet-status found">ENCONTRADO</span>
-            <div class="pet-info">
-                <h3>Eddie</h3>
-                <p>📌 São Paulo, SP</p>
-                <p>📅 11/06/2025</p>
-            </div>
-</article>
-
-<!-- PET 7 -->
-<article class="pet-card">
-    <img src="Media/Animais Encontrados/Cachorro/Cachorro 7.jpg" alt="Cachorro encontrado">
-        <span class="pet-status found">ENCONTRADO</span>
-            <div class="pet-info">
-                <h3>Susie</h3>
-                <p>📌 São Paulo, SP</p>
-                <p>📅 24/04/2026</p>
-            </div>
-</article>
-
-<!-- PET 8 -->
-<article class="pet-card">
-    <img src="Media/Animais Encontrados/Cachorro/Cachorro 8.jpg" alt="Cachorro encontrado">
-        <span class="pet-status found">ENCONTRADO</span>
-            <div class="pet-info">
-                <h3>Nina</h3>
-                <p>📌 São Paulo, SP</p>
-                <p>📅 30/08/2026</p>
-            </div>
-</article>
-
-<!-- PET 9 -->
-<article class="pet-card">
-    <img src="Media/Animais Encontrados/Cachorro/Cachorro 9.jpg" alt="Cachorro encontrado">
-        <span class="pet-status found">ENCONTRADO</span>
-            <div class="pet-info">
-                <h3>Cacau</h3>
-                <p>📌 São Paulo, SP</p>
-                <p>📅 04/05/2026</p>
-            </div>
-</article>
-
-<!-- PET 10 -->
-<article class="pet-card">
-    <img src="Media/Animais Encontrados/Cachorro/Cachorro 10.jpg" alt="Cachorro encontrado">
-        <span class="pet-status found">ENCONTRADO</span>
-            <div class="pet-info">
-                <h3>Nick</h3>
-                <p>📌 São Paulo, SP</p>
-                <p>📅 15/05/2026</p>
-            </div>
-</article>
-
-        </div>
-    </div>
-
-</section>
-
-<footer class="site-footer">
-    <div class="footer-content">
-        <img class="footer-logo" src="Media/Logo-com-título-remove.png" alt="AchePet">
-    <nav class="footer-links">
-        <a href="#">💬 Contato</a>
-        <a href="#">👥 Quem somos?</a>
-        <a href="#">🐾 Mural de Pets</a>
-        <a href="login.html">🔐 Entrar</a>
-    </nav>
-    </div>
-
-    <div class="footer-bottom">
-        <p>© 2026 Ache meu pet</p>
-        <div class="footer-divider"></div>
-        <p class="footer-message"><span>♡</span> Lorem Ipsum dolor</p>
-    </div>
-</footer>
+    </footer>
 
 </body>
