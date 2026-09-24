@@ -1104,60 +1104,44 @@
 
     }
 
+/* Mural animais - Botão Ver Mais */
 
-/*Imagens Animais Perdidos*/
-
-.lista-animais {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-}
-
-.animal {
-    overflow: hidden;
-    background: var(--branco);
-    border-radius: 14px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-}
-
-.animal img {
-    width: 100%;
-    height: 145px;
-    display: block;
-    object-fit: cover;
-}
-
-.animal .status {
-    display: block;
-    background-color: var(--rosa-principal);
-    color: var(--branco);
-    text-align: center;
-}
-
-/*Imagens Animais Encontrados*/
-
-.lista-animais {
-    display: grid;
-    grid-template-columns: repeat(5, 180px);
-    gap: 25px;
+.ver-mais-wrapper {
+    display: flex;
     justify-content: center;
+    margin-top: 35px;
 }
 
-.animal {
-    width: 180px;
+.btn-ver-mais {
+    padding: 10px 40px;
+    background: transparent;
+    color: var(--azul-principal);
+    border: 2px solid var(--azul-principal);
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: var(--fonte-poppins);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 0.25s ease;
 }
 
-.animal img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    display: block;
-}
-
-.animal .status1 {
-    display: block;
-    background-color: var(--azul-principal);
+.btn-ver-mais:hover {
+    background: var(--azul-principal);
     color: var(--branco);
-    text-align: center;
 }
 
+/* Mural animais - Botão rosa */
+
+.lost-section .btn-ver-mais {
+    background: transparent;
+    color: var(--rosa-principal);
+    border: 2px solid var(--rosa-principal);
+    box-shadow: none;
+}
+
+.lost-section .btn-ver-mais:hover {
+    background: var(--rosa-principal);
+    color: var(--branco);
+    box-shadow: none;
+}
