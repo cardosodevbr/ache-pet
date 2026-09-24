@@ -931,12 +931,12 @@
 
     }
 
-    /* CADASTRO */
+    /* LOGIN / CADASTRO */
 
     .cadastro-section {
-        min-height: 280px;
+        min-height: 430px;
 
-        padding: 35px 20px 45px;
+        padding: 55px 20px;
 
         background: var(--fundo-azul);
 
@@ -947,17 +947,19 @@
 
     .cadastro-container {
         width: 100%;
-        max-width: 400px;
+        max-width: 850px;
     }
 
     .cadastro-card {
         width: 100%;
 
-        padding: 32px 26px 20px;
+        padding: 45px;
 
         background: var(--azul-principal);
 
-        border-radius: 10px;
+        border-radius: 20px;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 
         display: flex;
         flex-direction: column;
@@ -971,6 +973,153 @@
         flex-direction: column;
 
         gap: 25px;
+    }
+
+
+    /* LOGIN */
+
+    #note {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 55px;
+    }
+
+
+    /* LADO DOS CAMPOS */
+
+    #note>div:first-child {
+        width: 55%;
+    }
+
+    #note>div:first-child>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    /* CAMPOS */
+
+    #note .teno {
+        width: 100%;
+        max-width: 380px;
+
+        height: 45px;
+
+        margin: 8px 0;
+
+        padding: 0 18px;
+
+        border: none;
+        border-radius: 25px;
+
+        outline: none;
+
+        background: var(--branco);
+        color: var(--preto);
+
+        font-family: var(--fonte-open-sans);
+        font-size: 13px;
+
+        transition: 0.2s ease;
+    }
+
+    #note .teno:focus {
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+    }
+
+    #note .teno::placeholder {
+        color: #666666;
+    }
+
+
+    /* BOTÃO ENTRAR */
+
+    #note #teno-button {
+    width: 220px;
+    height: 44px;
+
+    margin: 18px 0 0;
+
+    border: 2px solid var(--rosa-principal);
+    border-radius: 25px;
+
+    background-color: var(--rosa-principal);
+    color: var(--branco);
+
+    font-family: var(--fonte-poppins);
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+#note #teno-button:hover {
+    background-color: var(--branco);
+    color: var(--rosa-principal);
+
+    border-color: var(--branco);
+
+    transform: translateY(-2px);
+}
+
+    /* LADO DA IMAGEM E LINKS */
+
+    #note>div:last-child img {
+        width: 200px;
+        height: 200px;
+
+        object-fit: cover;
+
+        margin-bottom: 10px;
+
+        border-radius: 25px;
+
+        display: block;
+
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+
+        transition: transform 0.3s ease;
+    }
+
+    #note>div:last-child img:hover {
+        transform: rotate(-2deg) scale(1.04);
+    }
+
+    /* LINKS */
+
+    #note>div:last-child a {
+        display: block;
+
+        color: var(--branco);
+
+        font-family: var(--fonte-open-sans);
+        font-size: 13px;
+        font-weight: 600;
+
+        text-decoration: none;
+
+        margin-top: 2px;
+
+        transition: 0.2s ease;
+    }
+
+    #note>div:last-child a:hover {
+        color: var(--rosa-principal );
+        text-decoration: none;
+    }
+
+
+    /* OUTRAS TELAS DE CADASTRO */
+
+    .cadastro-card p {
+        color: var(--branco);
     }
 
     .cadastro-fields input {
@@ -989,10 +1138,6 @@
 
         font-family: var(--fonte-open-sans);
         font-size: 10px;
-    }
-
-    .cadastro-card p {
-        color: #fff;
     }
 
     .cadastro-fields input::placeholder {
@@ -1022,35 +1167,16 @@
 
     .cadastro-button:hover {
         background: var(--botao-hover-rosa);
+
         transform: translateY(-1px);
     }
 
 
-    /*FAIXA ROSA DO CADASTRO */
-
-    .cadastro-pink-section {
-        height: 110px;
-
-        background: var(--fundo-rosa);
-    }
-
-
-    /* AJUSTE DO FOOTER NO CADASTRO */
-
-    .cadastro-section+.cadastro-pink-section+.site-footer {
-        margin-top: 0;
-    }
-
-    /* para a tela de digitar o codigo */
-    #note {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-    }
+    /* BOTÃO DA TELA DE CÓDIGO */
 
     #note-button {
         background-color: #f881b0;
+
         width: 110%;
         height: 28px;
 
@@ -1060,49 +1186,80 @@
         outline: none;
     }
 
-    .teno {
-        margin: 8px;
-    }
 
-    #teno-button {
-        background-color: #E9166B;
-        ;
-        width: 65%;
-        height: 25px;
+    /* =========================
+   FAIXA ROSA
+   ========================= */
 
-        border: none;
-        border-radius: 20px;
+    .cadastro-pink-section {
+        height: 90px;
 
-        outline: none;
+        background: var(--fundo-rosa);
     }
 
 
-    /* RESPONSIVO - CADASTRO */
+    /* AJUSTE DO FOOTER */
 
-    @media (max-width: 600px) {
+    .cadastro-section+.cadastro-pink-section+.site-footer {
+        margin-top: 0;
+    }
+
+
+    /* =========================
+   RESPONSIVO
+   ========================= */
+
+    @media (max-width: 700px) {
 
         .cadastro-section {
-            min-height: 280px;
+            min-height: auto;
 
-            padding: 35px 20px 45px;
+            padding: 40px 20px;
         }
 
         .cadastro-container {
-            max-width: 400px;
+            max-width: 500px;
         }
 
         .cadastro-card {
-            padding: 32px 25px 20px;
+            padding: 35px 25px;
         }
 
-        .cadastro-button {
-            width: 60%;
+        #note {
+            flex-direction: column;
+
+            gap: 30px;
+        }
+
+        #note>div:first-child,
+        #note>div:last-child {
+            width: 100%;
+        }
+
+        #note>div:first-child>div {
+            align-items: center;
+        }
+
+        #note .teno {
+            max-width: 100%;
+        }
+
+        #note>div:last-child {
+            order: -1;
+        }
+
+        #note>div:last-child img {
+            width: 100px;
+            height: 100px;
+        }
+
+        #teno-button {
+            width: 200px;
         }
 
         .cadastro-pink-section {
-            height: 108px;
+            height: 70px;
         }
-
     }
 
     /* Mural animais - Botão Ver Mais */
@@ -1147,7 +1304,7 @@
         box-shadow: none;
     }
 
-    /* QUEM SOMOS= */
+    /* QUEM SOMOS */
 
     .quem-somos {
         background: var(--fundo-azul);
