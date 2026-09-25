@@ -2082,3 +2082,9 @@
     a {
         text-decoration: none;
     }
+
+    .formulario-fotos {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
