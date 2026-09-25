@@ -26,11 +26,11 @@
 
                 <a href="login.html">LOGIN</a>
 
-                <a href="form1.html">FORMULÁRIO</a>
+                <a href="form1.html">CADASTRAR ANIMAL</a>
 
                 <a href="#mural">MURAL</a>
 
-                <a href="#quem-somos">QUEM SOMOS?</a>
+                <a href="quem-somos.html">QUEM SOMOS?</a>
 
             </nav>
 
@@ -41,7 +41,183 @@
         </div>
 
     </header>
+
+    <container id="formulario-container">
+            
+            
+
+            <div class="formulario-enunciado">
+
+                <img src="Media/patinha-rosa.png" id="patinha-rosa">
+            
+
+                <div class="formulario-enunciado-texto">
+
+                    <h1>Cadastrar seu animal</h1>
+                    
+                    <p>Cadastre um animal perdido ou encontrado e ajude a conectá-lo novamente à sua família.</p>
+
+                </div>
+
+            </div>
         
+            <div class="formulario-selecao">
+                <div class="titulo-situacao">
+                    Informações do animal
+                </div>
+
+                <div class="formulario-cadastro">
+
+                    <div class="campo">
+                    <label for="nome">Nome do Animal:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite o nome do animal">
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="especie">Espécie:</label>
+                        <select id="especie">
+                            <option value="">Selecione a espécie:</option>
+                            <option value="Gato">Gato</option>
+                            <option value="Cachorro">Cachorro</option>
+                            <option value="Ave">Ave</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                    </div>
+
+
+                    <div class="campo">
+                    <label for="idade">Idade: (Aproximada)</label>
+                    <input type="text" name="idade" id="idade" placeholder="Digite a idade do animal">
+                    </div>
+                    
+                    <div class="campo campo-sexo">
+                        <label>Sexo</label>
+
+                        <div class="opcoes-sexo">
+
+                            <label>
+                                <input type="radio" name="sexo" value="femea">
+                                Fêmea
+                            </label>
+
+                            <label>
+                                <input type="radio" name="sexo" value="macho">
+                                Macho
+                            </label>
+
+                            <label>
+                                <input type="radio" name="sexo" value="nao-identificado">
+                                Não identificado
+                            </label>
+
+                        </div>
+                    </div>
+                         
+                    <div class="campo">
+                    <label for="lista-raca">Raça:</label>
+                    <input type="text" id="raca" name="lista-raca" list="raca">
+
+                            <datalist id="lista-raca">
+                                <option value="Pug">Pug</option>
+                                <option value="Chihuahua">Chihuahua</option>
+                                <option value="Dachshund">Salsicha</option>
+                                <option value="Golden Retriever">Golden Retriever</option>
+                                <option value="Labrador">Labrador</option>
+                                <option value="Pastor Alemão">Pastor Alemão</option>
+                                <option value="Pastor Belga">Pastor Belga</option>
+                                <option value="Rottweiler">Rottweiler</option>
+                                <option value="Bulldog Francês">Bulldog Francês</option>
+                                <option value="Bulldog Inglês">Bulldog Inglês</option>
+                                <option value="Shih-tzu">Shih-tzu</option>
+                                <option value="Yorkshire Terrier">Yorkshire Terrier</option>
+                                <option value="Pinscher">Pinscher</option>
+                                <option value="Poodle">Poodle</option>
+                                <option value="Border Collie">Border Collie</option>
+                                <option value="Beagle">Beagle</option>
+                                <option value="Husky Siberiano">Husky Siberiano</option>
+                                <option value="Maltês">Maltês</option>
+                                <option value="Spitz Alemão">Spitz Alemão</option>
+                                <option value="Chow Chow">Chow Chow</option>
+                                <option value="Akita">Akita</option>
+                                <option value="Pitbull">Pitbull</option>
+                                <option value="Boxer">Boxer</option>
+                                <option value="Cocker Spaniel">Cocker Spaniel</option>
+                                <option value="São Bernardo">São Bernardo</option>
+                                <option value="Doberman">Doberman</option>
+                                <option value="Basset Hound">Basset Hound</option>
+                                <option value="Jack Russell Terrier">Jack Russell Terrier</option>
+                                <option value="Cane Corso">Cane Corso</option>
+                                <option value="Vira-lata">Vira-lata / SRD</option>
+
+                                <option value="Persa">Persa</option>
+                                <option value="Siamês">Siamês</option>
+                                <option value="Maine Coon">Maine Coon</option>
+                                <option value="Ragdoll">Ragdoll</option>
+                                <option value="Bengal">Bengal</option>
+                                <option value="Sphynx">Sphynx</option>
+                                <option value="Angorá">Angorá</option>
+                                <option value="British Shorthair">British Shorthair</option>
+                                <option value="Scottish Fold">Scottish Fold</option>
+                                <option value="American Shorthair">American Shorthair</option>
+
+                                <option value="Papagaio">Papagaio</option>
+                                <option value="Calopsita">Calopsita</option>
+                                <option value="Periquito">Periquito</option>
+                                <option value="Canário">Canário</option>
+
+                                <option value="Hamster">Hamster</option>
+                                <option value="Porquinho-da-índia">Porquinho-da-índia</option>
+                                <option value="Coelho">Coelho</option>
+                                <option value="Chinchila">Chinchila</option>
+                                <option value="Gerbil">Gerbil</option>
+                                <option value="Rato doméstico">Rato doméstico</option>
+
+                                <option value="Tartaruga">Tartaruga</option>
+                                <option value="Jabuti">Jabuti</option>
+                                <option value="Iguana">Iguana</option>
+                                <option value="Gecko">Gecko</option>
+                                <option value="Camaleão">Camaleão</option>
+
+
+                                <option value="Outro">Outro</option>
+                            </datalist>
+                       
+                    </div>
+
+                    <div class="campo">
+                        <label for="Porte">Porte:</label>
+                        <select id="Porte" name="Porte">
+                            <option value="">Selecione o Porte:</option>
+                            <option value="Grande">Grande</option>
+                            <option value="Médio">Médio</option>
+                            <option value="Pequeno">Pequeno</option>
+                            <option value="Não especificado">Não especificado</option>
+                        </select>
+                    </div>
+
+                    <div class="campo campo-cor">
+                    <label for="cor">Cor:</label>
+                    <input type="text" name="cor" id="cor" placeholder="Digite a cor do Animal">
+                    </div>
+
+                    <div class="campo campo-caracteristicas">
+                    <label for="caracteristicas">Características:</label>
+                    <input type="text" name="caracteristicas" id="caracteristicas" placeholder="Digite as Características do Animal">
+                    </div>
+
+
+                    </div>
+
+                    
+                
+            <div id="btn-formulario">
+                <a href="form1.html" id="btn-formulario1">Anterior</a>
+                <a href="form3.html" id="btn-formulario2">Prosseguir</a>
+            </div>
+
+            </div>
+            
 
 
     </container>
@@ -73,26 +249,6 @@
             </nav>
 
         </div>
-        
-        <container id="formulario-container">
-
-
-            <div class="formulario-enunciado">
-
-                <img src="Media/patinha-rosa.png" id="patinha-rosa">
-            
-
-                <div class="formulario-enunciado-texto">
-                    
-                    <h1>Cadastrar seu animal</h1>
-                    
-                    <p>Cadastre um animal perdido ou encontrado e ajude a conectá-lo novamente à sua família.</p>
-
-                </div>
-
-            </div>
-        </container>
-
 
         <div class="footer-bottom">
 
