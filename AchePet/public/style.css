@@ -289,7 +289,7 @@ body {
 .hero {
     min-height: 390px;
 
-    padding: 65px 20px;
+    padding-left: 80px;
 
     background: url(Media/hero-mural-encontrados.png);
     background-position: bottom;
@@ -317,7 +317,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
-    z-index: 2;
+    
 }
 
 
@@ -1657,7 +1657,7 @@ body.pagina-encontrados .search-box {
 body.pagina-procurados .hero {
     background-image: url(Media/hero-mural-procurado.png);
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
 }
 
@@ -1665,7 +1665,7 @@ body.pagina-procurados .hero h1 {
     color: #E9166B;
     font-size: 80px;
     font-weight: 800;
-    width: 20px;
+    width: 80px;
     text-align: center;
     font-family: 'Fredoka', sans-serif;
     transform: rotate(-3deg);
@@ -1677,9 +1677,9 @@ body.pagina-procurados .hero h1 {
    ========================================================= */
 
 body.pagina-encontrados .hero {
-    background-image: url(Media/Hero-mural-encontrado.png);
+    background-image: url(Media/Hero-mural-encontrados.png);
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
 }
 
@@ -1687,7 +1687,7 @@ body.pagina-encontrados .hero h1 {
     color: var(--azul-escuro);
     font-size: 80px;
     font-weight: 700;
-    width: 20px;
+    width: 80px;
     text-align: center;
     font-family: 'Fredoka', sans-serif;
     transform: rotate(-3deg);
@@ -4252,4 +4252,9 @@ html[data-tema="escuro"] .animal-detalhe-imagem img {
 
 #coracao {
     width: 60px;
+}
+
+#coracao-encontrados{
+    width: 30px;
+    transform: rotate(3deg);
 }
