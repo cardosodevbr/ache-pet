@@ -288,26 +288,29 @@ body {
 
 .hero {
     min-height: 390px;
-
-    padding-left: 80px;
-
+    
+    /* Removido o padding-left: 80px; pois o alinhamento será feito pelo container */
+    
     background: url(Media/hero-mural-encontrados.png);
     background-position: bottom;
-
-    display: flex;
-    align-items: center;
-     
-
-    text-align: center;
-    height: calc(100vh - 69.33px);
-
-
     
+    /* Removido o display: flex e align-items (eles vão para o hero-container) */
+    
+    height: 600px;
 }
 
-
-
-
+/* NOVO: Container com a mesma largura do header-container */
+.hero-container {
+    width: 92%;
+    max-width: 1200px;
+    height: 100%;
+    
+    margin: 0 auto; /* Centraliza na tela */
+    
+    display: flex;
+    align-items: center;
+    position: relative; /* Fundamental para travar a imagem dos animais dentro da largura de 1200px */
+}
 
 .hero-content {
     width: 100%;
