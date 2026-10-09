@@ -11,6 +11,10 @@
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
+        <!-- 1. Conexão com o Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+
     <title>LOGIN | AchePet 🐾</title>
 
     <script src="tema.js"></script>
@@ -84,7 +88,7 @@
                                 <input class="teno" type="password" id="loginSenha" placeholder="Digite sua senha"
                                     autocomplete="current-password">
 
-                                <button id="teno-button" type="button">
+                                <button id="teno-button" type="button" onclick="logar()">
                                     ENTRAR
                                 </button>
 
@@ -169,5 +173,32 @@
     <script src="script.js"></script>
 
 </body>
+
+<script>
+
+        async function logar() {
+            // 2. Captura os valores digitados nos inputs 
+            const email = document.getElementById('loginEmail').value.trim();
+            const senha = document.getElementById('loginSenha').value;
+
+            // Evita rodar se estiver vazio
+            if (!email || !senha) return alert("⚠️ Preencha e-mail e senha!");
+
+            // 3. Envia o comando de Autenticação para o Supabase
+            const { error } = await clienteSupabase.auth.signInWithPassword({
+                email: email,
+                password: senha
+            });
+
+            // 4. Caminho Feliz: Se NÃO tiver erro, vai para a página logada
+            if (!error) {
+                // e agora?: pra onde vai?
+                window.location.replace(''); 
+            } else {
+                // Mostra o erro só pra ajudar a turma a ver se erraram a senha
+                alert("❌ Erro ao entrar: " + error.message);
+            }
+        }
+    </script>
 
 </html>
