@@ -226,14 +226,15 @@ async function registrar() {
     btnRegistrar.innerText = "Processando...";
     btnRegistrar.disabled = true; // Evita duplos cliques
 
-    // 4. Envia o comando de cadastro para o Supabase
+     // 4. Envia o comando de cadastro para o Supabase
     const { data, error } = await clienteSupabase.auth.signUp({
         email: email,
         password: senha,
         options: {
             data: {
-                // Salva o Nome Completo dentro dos metadados de autenticação do usuário
-                nome_completo: nome 
+                // Usamos os termos exatos que o painel do Supabase procura:
+                display_name: nome,
+                full_name: nome 
             }
         }
     });
