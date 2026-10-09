@@ -11,9 +11,36 @@
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-        <!-- 1. Conexão com o Supabase -->
+    <!-- 1. Conexão com o Supabase -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="supabase-config.js"></script>
+
+    <script>
+        // Executa automaticamente assim que a página de LOGIN abre
+        document.addEventListener('DOMContentLoaded', async () => {
+            
+            // Pega os dois botões do menu
+            const botaoLogin = document.getElementById('nav-login');
+            const botaoCadastrar = document.getElementById('nav-cadastrar');
+
+            // 1. ESTADO PADRÃO DO MENU: Bloqueia o "Cadastrar Animal"
+            botaoCadastrar.style.color = '#aaa'; 
+            botaoCadastrar.style.cursor = 'not-allowed'; 
+            botaoCadastrar.onclick = (event) => {
+                event.preventDefault(); 
+                alert("⚠️ Faça login ou cadastre-se para cadastrar um animal.");
+            };
+
+            // 2. PERGUNTA AO BANCO: "Tem alguém logado aí?"
+            const { data: { user } } = await clienteSupabase.auth.getUser();
+
+            // 3. SE JÁ ESTIVER LOGADO: 
+            if (user) {
+                // Ao invés de só mudar o menu, nós tiramos o usuário da página de login!
+                window.location.replace('index.html');
+            }
+        });
+    </script>
 
     <title>LOGIN | AchePet 🐾</title>
 
@@ -36,9 +63,9 @@
             <nav class="main-nav">
                 <a href="index.html">INÍCIO</a>
 
-                <a href="login.html" class="active">LOGIN</a>
+                <a href="login.html" id="nav-login" class="active">LOGIN</a>
 
-                <a href="form1.html">CADASTRAR ANIMAL</a>
+                <a href="form1.html" id="nav-cadastrar">CADASTRAR ANIMAL</a>
 
                 <div class="nav-dropdown">
                     <a href="#" class="nav-dropdown-link">MURAL</a>
