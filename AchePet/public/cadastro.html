@@ -247,11 +247,12 @@ async function registrar() {
     if (error) {
         alert("❌ Erro ao cadastrar: " + error.message);
     } else {
-        alert("✅ Cadastro realizado com sucesso! Redirecionando...");
-        // Redireciona o usuário para a página de login ou para o mural
-        window.location.replace('login.html'); 
+        // Redirecionamento silencioso e direto usando caminho relativo
+        window.location.replace('public/registro.html'); 
     }
 }
+
+
 
 </script>
 
