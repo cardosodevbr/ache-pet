@@ -12,6 +12,10 @@
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
+        <!-- Conexão com o banco de dados no Supabase -->
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        <script src="supabase-config.js"></script>
+
     <title>Cadastro | AchePet 🐾</title>
 
     <script src="tema.js"></script>
@@ -100,16 +104,18 @@
                             <input type="email" id="email" placeholder="Digite seu e-mail" autocomplete="email">
                         </div>
 
+                        <!-- Desabilitado temporariamente por restrições de LGPD
                         <div class="cadastro-field">
                             <label for="cpf">CPF</label>
                             <input type="text" id="cpf" placeholder="000.000.000-00" inputmode="numeric" maxlength="14"
                                 autocomplete="off">
-                        </div>
+                        </div> -->
 
+                        <!-- Vamos incluir essa etapa pós autenticação
                         <div class="cadastro-field">
                             <label for="cidade">Cidade</label>
                             <input type="text" id="cidade" placeholder="Digite sua cidade">
-                        </div>
+                        </div> -->
 
                         <div class="cadastro-field">
                             <label for="senha">Senha</label>
@@ -125,7 +131,7 @@
 
                     </div>
 
-                    <button type="button" class="cadastro-button" id="btnRegistrar">
+                    <button type="button" class="cadastro-button" id="btnRegistrar" onclick="registrar()">
                         REGISTRAR-SE
                     </button>
                 </div>
@@ -192,5 +198,60 @@
     <script src="script.js"></script>
 
 </body>
+
+<script>
+
+async function registrar() {
+    // 1. Captura os valores digitados nos inputs do HTML
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const senha = document.getElementById('senha').value;
+    const confirmarSenha = document.getElementById('confirmar-senha').value;
+    const btnRegistrar = document.getElementById('btnRegistrar');
+
+    // 2. Validações de segurança e preenchimento
+    if (!nome || !email || !senha || !confirmarSenha) {
+        return alert("⚠️ Por favor, preencha todos os campos.");
+    }
+
+    if (senha.length < 8) {
+        return alert("⚠️ A senha deve ter no mínimo 8 caracteres.");
+    }
+
+    if (senha !== confirmarSenha) {
+        return alert("⚠️ As senhas não coincidem. Digite novamente.");
+    }
+
+    // 3. Feedback visual: Muda o texto do botão para o usuário saber que está carregando
+    btnRegistrar.innerText = "Processando...";
+    btnRegistrar.disabled = true; // Evita duplos cliques
+
+    // 4. Envia o comando de cadastro para o Supabase
+    const { data, error } = await clienteSupabase.auth.signUp({
+        email: email,
+        password: senha,
+        options: {
+            data: {
+                // Salva o Nome Completo dentro dos metadados de autenticação do usuário
+                nome_completo: nome 
+            }
+        }
+    });
+
+    // 5. Restaura o botão ao estado original
+    btnRegistrar.innerText = "REGISTRAR-SE";
+    btnRegistrar.disabled = false;
+
+    // 6. O Caminho Feliz: Verifica se deu erro ou sucesso
+    if (error) {
+        alert("❌ Erro ao cadastrar: " + error.message);
+    } else {
+        alert("✅ Cadastro realizado com sucesso! Redirecionando...");
+        // Redireciona o usuário para a página de login ou para o mural
+        window.location.replace('login.html'); 
+    }
+}
+
+</script>
 
 </html>
